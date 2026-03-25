@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menus Energy Cafe</title>
+        <link href="general.css" rel="stylesheet"/>
+        <link href="menu.css" rel="stylesheet"/>
+        <link href="image/Logo.png" rel="shortcut icon"/>
+    </head>
+    <body>
+        <!----Header (same on all pages)----------------------------------------------------->
+        <header>
+            <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Services</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="icon-cart" onclick="audio.play();">
+                <img src="image/cart_icon.png" alt="shopping cart"/>
+                <span>0</span>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------->
+        <!--title and intro video-->
+        <div class="title">
+            <video autoplay muted loop>
+                <source src="audiovideo/menu_INTRO.mp4" type="video/mp4"/>
+            </video>
+            <h1>Our Menu</h1>
+        </div>
+        <!---Shopping cart module (same on all pages)---------------------------------------->
+        <div class="listProduct"></div>
+        <div class="cartTab">
+            <div class="cartTab-header">
+                <h1>Shopping Cart</h1>
+                <button class="close">X</button>
+            </div>
+            <div id="divider"></div>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="item/cake1.png" alt="">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="totalPrice">
+                        RM 200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <button class="checkOut" onclick="window.location.href = 'payment.html'" >Check Out</button>
+        </div>
+        <!---------------------------------------------------------------------------------->
+        <!--Section 1 (Sorts of Selections)-->
+        <div class="parallex">
+            <h1 id="parallex-text">Sorts of <br>Selections</h1>
+            <a href="#catPlate"><img src="image/arrow.png" alt="arrow" id="arrowElmt"/></a>
+            <img src="image/parallex2.png" id="element2"/>
+            <img src="image/parallex1.png" id="element1"/>
+        </div>
+        <section id="waveDivide">
+            <div class="wave" id="wave1-1" styles="--i:1"></div>
+            <div class="wave" id="wave1-2" styles="--i:2"></div>
+            <div class="wave" id="wave1-3" styles="--i:3"></div>
+            <div class="wave" id="wave1-4" styles="--i:4"></div>
+        </section>
+        <!--Section 2 (Cake Category)-->
+        <div class="cakeCat">
+            <img src="image/cakeCatPic1.png" id="cakePic1" alt="cake graphic"/>
+            <h1 id="cake-text">Sweet Cake</h1>
+            <p id="cake-text2">Always Fresh</p>
+            <a href="cake.html"><button class="menuCake">Try Now</button></a>
+            <img src="image/cakeCatPic2.png" id="cakePic2" alt="cake2 graphic"/>
+            <p id="cake-text3">Sugar to boost your<br><span>Energy</span></p>
+        </div>
+        <section id="wave2Divide">
+            <div class="wave" id="wave2-1" styles="--i:1"></div>
+            <div class="wave" id="wave2-2" styles="--i:2"></div>
+            <div class="wave" id="wave2-3" styles="--i:3"></div>
+            <div class="wave" id="wave2-4" styles="--i:4"></div>
+        </section>
+        <!--Section 3 (Drinks Category)-->
+        <div class="drinksCat">
+            <p id="drinks-text5">GOOD</p>
+            <img src="image/drinksCatPic3.png" id="drinksPic3" alt="coffee graphic"/>
+            <h1 id="drinks-text">Coffee</h1>
+            <h2 id="drinks-text2">Energetic Secret</h2>
+            <h2 id="drinks-text3">E = MC<sup>2</sup>
+                <br>
+                Energy = <br>Milk x Coffee<sup>2</sup>
+            </h2>
+            <img src="image/drinksCatPic1.png" id="drinksPic1" alt="cola graphic"/>
+            <img src="image/drinksCatPic2.png" id="drinksPic2" alt="sundae graphic"/>
+            <p id="drinks-text4">Step into our charming retro cafe, offering an array of classic beverages and savory treats.</p>
+            <a href="drinks.html"><button class="menuDrinks">See Drinks</button></a>
+        </div>
+        <section id="wave3Divide">
+            <div class="wave" id="wave3-1" styles="--i:1"></div>
+            <div class="wave" id="wave3-2" styles="--i:2"></div>
+            <div class="wave" id="wave3-3" styles="--i:3"></div>
+            <div class="wave" id="wave3-4" styles="--i:4"></div>
+        </section>
+        <!--Section 4 (Pastries Category)-->
+        <div class="pastriesCat">
+            <p id="pastries-text1">Enjoy <br>This Moment</p>
+            <p id="pastries-text2">TOASTED</p>
+            <img src="image/pastriesCatPic1.png" id="pastriesPic1" alt="croissant"/>
+            <img src="image/pastriesCatPic2.png" id="pastriesPic2" alt="bagels"/>
+            <img src="image/pastriesCatPic3.png" id="pastriesPic3" alt="waffle"/>
+            <h1 id="pastries-text3">Pastries</h1>
+            <a href="pastries.html"><button class="menuPastries">See Now !</button></a>
+            <h2 id="pastries-text4">Fresh from Oven</h2>
+            <p id="pastries-text5">Delight with freshly baked pastries, ready to tempt your taste buds with perfect balance of salt and sweet!</p>
+        </div>
+        <section id="wave4Divide">
+            <div class="wave" id="wave4-1" styles="--i:1"></div>
+            <div class="wave" id="wave4-2" styles="--i:2"></div>
+            <div class="wave" id="wave4-3" styles="--i:3"></div>
+            <div class="wave" id="wave4-4" styles="--i:4"></div>
+        </section>
+        <!--Section 5 (Breakfast Category)-->
+        <div class="breakfastCat">
+            <h1 id="breakfast-text1">Breakfast</h1>
+            <h2 id="breakfast-text2">Good Start of a Day</h2>
+            <p id="breakfast-text3">Power up your day with our energizing breakfast choices! Kickstart your day at <br><span>Energy Cafe</span> <br>Makes your breakfast extra special.</p>
+            <a href="breakfast.html"><button class="menuBreakfast">Grab It</button></a>
+            <img src="image/breakfastCatPic1.png" id="breakfastPic1" alt="egg bacon"/>
+            <img src="image/breakfastCatPic2.png" id="breakfastPic2" alt="pancake"/>   
+        </div>
+        <section id="wave5Divide">
+            <div class="wave" id="wave5-1" styles="--i:1"></div>
+            <div class="wave" id="wave5-2" styles="--i:2"></div>
+            <div class="wave" id="wave5-3" styles="--i:3"></div>
+            <div class="wave" id="wave5-4" styles="--i:4"></div>
+        </section>
+        <!--Section 6 (Pasta Category)-->
+        <div class="pastaCat">
+            <h1 id="pasta-text1">Pasta</h1>
+            <img src="image/pastaCatPic1.png" id="pastaPic1" alt="spaghetti"/>
+            <img src="image/pastaCatPic2.png" id="pastaPic2" alt="pasta fork"/>
+            <img src="image/pastaCatPic3.png" id="pastaPic3" alt="macarroni"/>
+            <h2 id="pasta-text2">Satisfied<br> and Flavourful</h2>
+            <h2 id="pasta-text3">Perfection Delight</h2>
+            <p id="pasta-text4">Discover pasta options in our cafe. From creamy carbonara to zesty marinara, spaghetti to macarroni, our pasta dishes are your best choice.</p>
+            <a href="pasta.html"><button class="menuPasta">Eat Now !</button></a>
+        </div>
+
+        <!--Promotion, Recommendations, Speciality Sections-->
+        <div class="scrollText">
+            <h1>Promotion Available! • Recommendations •</h1>
+            <h1>Promotion Available! • Recommendations •</h1>
+            <h1>Promotion Available! • Recommendations •</h1>
+        </div>
+        <img id="arrow" src="audiovideo/arrow.gif" alt="arrow" />
+        <div class="promotion">
+            <img id="curious" src="image/menuPic1.png" alt="women curious" onclick="toggleSpeciality()" />
+            <div class="what">
+                <div class="what-content">
+                    <h2>What's So Special ? ?</h2>
+                </div>
+            </div>
+            <div class="speciality">
+                <div class="speciality-content">
+                    <h2>Speciality</h2>
+                    <p>
+                        <strong>Introducing: Our trendiest food and coffee</strong>
+                        <br>
+                        Find out the newest popular items and enjoy discount offered now! Indulge in our chef's special recommendations, meticulously crafted to elevate your dining experience. 
+                    </p>
+                </div>
+            </div>
+
+            <!--Slide Show Poster section-->
+            <section class="slideshow">
+                <h2>Find Your Taste</h2>
+                <button class="pre-btn"><img style="transform: rotate(180deg);" src="image/next-button.png" alt="previous button"/></button>
+                <button class="nxt-btn"><img src="image/next-button.png" alt="next button"/></button>
+                <div class="slide-container">
+                    <div class="item-card">
+                        <div class="slide-image">
+                            <span class="slide-tag">Discount 20%</span>
+                            <img src="image/slideshow1.png" alt=""/>
+                            <button class="card-btn" onclick="cartSound.play(); addToCart(32)">Order Now</button>
+                        </div>
+                        <div class="item-info">
+                            <h2>Hazelnut Latte</h2>
+                            <p>Creamy nutty aromatic coffee</p>
+                            <span class="price">RM 11.10</span>
+                            <span class="actual-price">RM 13.90</span>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="slide-image">
+                            <span class="slide-tag">Recommended&#128077;</span>
+                            <img src="image/slideshow2.png" alt=""/>
+                            <button class="card-btn"  onclick="cartSound.play(); addToCart(33)">Order Now</button>
+                        </div>
+                        <div class="item-info">
+                            <h2>Cheese Creme Latte</h2>
+                            <p>Rich with milky flavor</p>
+                            <span class="price">RM 12.90</span>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="slide-image">
+                            <span class="slide-tag">Discount 50%</span>
+                            <img src="image/slideshow3.png" alt=""/>
+                            <button class="card-btn" onclick="cartSound.play(); addToCart(34)">Order Now</button>
+                        </div>
+                        <div class="item-info">
+                            <h2>Latte Osmanthus</h2>
+                            <p>Floral, sweet aromatic</p>
+                            <span class="price">RM 9.90</span>
+                            <span class="actual-price">RM 18.90</span>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="slide-image">
+                            <span class="slide-tag">New Product</span>
+                            <img src="image/slideshow4.png" alt=""/>
+                            <button class="card-btn" onclick="cartSound.play(); addToCart(42)">Shop Now</button>
+                        </div>
+                        <div class="item-info">
+                            <h2>Orange Coffee</h2>
+                            <p>Citrus-infused coffee blend</p>
+                            <span class="price">RM 10.90</span>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="slide-image">
+                            <span class="slide-tag">Classic</span>
+                            <img src="image/slideshow5.png" alt=""/>
+                            <button class="card-btn" onclick="cartSound.play(); addToCart(43)">Shop Now</button>
+                        </div>
+                        <div class="item-info">
+                            <h2>Iced Americano</h2>
+                            <p>Chilled classical choice</p>
+                            <span class="price">RM 7.90</span>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="slide-image">
+                            <span class="slide-tag">Speciality</span>
+                            <img src="image/slideshow6.png" alt=""/>
+                            <button class="card-btn" onclick="cartSound.play(); addToCart(44)">Shop Now</button>
+                        </div>
+                        <div class="item-info">
+                            <h2>Nitro Cold Brew</h2>
+                            <p>Only in Energy Cafe</p>
+                            <span class="price">RM 11.90</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--Empty Plate Category Section-->
+        <div class="scrollText" id="catPlate">
+            <h1>What to eat? • Menu Category •</h1>
+            <h1>What to eat? • Menu Category •</h1>
+            <h1>What to eat? • Menu Category •</h1>
+        </div>
+        <div class="quickView">
+            <img src="image/menuEmptyplate.png" alt="empty plate"/>
+            <button class="plateButton" id="plate1" onmouseover="showPlateImage('plateimg1')" onmouseout="hideImage('plateimg1')" onclick="window.location.href = 'cake.html'">
+                <span class="categoryText">Cake</span>
+            </button>
+            <button class="plateButton" id="plate2" onmouseover="showPlateImage('plateimg2')" onmouseout="hideImage('plateimg2')" onclick="window.location.href = 'pastries.html'">
+                <span class="categoryText">Pastries</span>
+            </button>
+            <button class="plateButton" id="plate3" onmouseover="showPlateImage('plateimg3')" onmouseout="hideImage('plateimg3')" onclick="window.location.href = 'breakfast.html'">
+                <span class="categoryText">Breakfast</span>
+            </button>
+            <button class="plateButton" id="plate4" onmouseover="showPlateImage('plateimg4')" onmouseout="hideImage('plateimg4')" onclick="window.location.href = 'drinks.html'" >
+                <span class="categoryText">Drinks</span>
+            </button>
+            <button class="plateButton" id="plate5" onmouseover="showPlateImage('plateimg5')" onmouseout="hideImage('plateimg5')" onclick="window.location.href = 'pasta.html'">
+                <span class="categoryText">Pasta</span>
+            </button>
+            <img id="plateimg1" class="plateImage" src="image/menuPlate1.png"/>
+            <img id="plateimg2" class="plateImage" src="image/menuPlate2.png"/>
+            <img id="plateimg3" class="plateImage" src="image/menuPlate3.png"/>
+            <img id="plateimg4" class="plateImage" src="image/menuPlate4.png"/>
+            <img id="plateimg5" class="plateImage" src="image/menuPlate5.png"/>
+        </div>
+
+        <!--Menu Overview Section-->
+        <div class="menuPrompt">
+            <h2>Menu Overview</h2>
+            <img id="target" src="image/menuPic2.png" alt="plate" onclick="toggleMenu()"/>
+            <img id="arrow2" src="audiovideo/arrow2.gif" alt="arrow" />
+            <button><a href="MenuEnergyCafe.pdf" download="MenuEnergyCafe.pdf">Download PDF</a></button>
+        </div>
+        <div class="menuPop">
+            <img id="menu" src="image/MenuOverview.png" alt="menu" width="100%"/>
+            <button onclick="toggleMenu()">X</button>
+        </div>
+
+        <!----Footer (same on all pages)----------------------------------------------------->
+        <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                        <li><a href="job.html">Job Vacancy</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termscondition.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="cake.html">Cake</a></li>
+                        <li><a href="drinks.html">Drink</a></li>
+                        <li><a href="pastries.html">Pastries</a></li>
+                        <li><a href="pasta.html">Pasta</a></li>
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
+                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
+                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!----------------------------------------------------------------------------------->
+        <script src="menu.js"></script>
+        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
+        <script src="general.js"></script>  <!--apply to all pages (header)-->
+    </body>
+</html>

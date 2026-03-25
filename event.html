@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Event Energy Cafe</title>
+        <link href="general.css" rel="stylesheet"/>
+        <link href="event.css" rel="stylesheet"/>
+        <link href="image/Logo.png" rel="shortcut icon"/>
+    </head>
+    <body>
+        <!----Header (same on all pages)----------------------------------------------------->
+        <header>
+            <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Services</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="icon-cart" onclick="audio.play();">
+                <img src="image/cart_icon.png" alt="shopping cart"/>
+                <span>0</span>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------->
+        <!--title and intro-->
+        <div class="eventstitle">
+            <img id="title-img" src="image/event-title-bg.png"/>
+            <h1>Events</h1>
+            <img id="about-background-top" src="image/bg-colour.png" alt="whitebackground">
+        </div>
+        <!---Shopping cart module (same on all pages)---------------------------------------->
+        <div class="listProduct"></div>
+        <div class="cartTab">
+            <div class="cartTab-header">
+                <h1>Shopping Cart</h1>
+                <button class="close">X</button>
+            </div>
+            <div id="divider"></div>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="item/cake1.png" alt="">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="totalPrice">
+                        RM 200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <button class="checkOut" onclick="window.location.href = 'payment.html'" >Check Out</button>
+        </div>
+        <!---------------------------------------------------------------------------------->
+
+        <!--About the space-->
+        <div class="eventsAbout">
+            <div class="eventsSpace-about">
+                <h2>About The Space</h2>
+            </div>
+            <!--space image container slide-->
+            <div class="container">
+                <span class="slider" id="slider1"></span>
+                <span class="slider" id="slider2"></span>
+                <span class="slider" id="slider3"></span>
+                <div class="imgContainer">
+                    <div class="slide_div" id="slide_1">
+                        <img src="image/slide1.jpg" alt="" class="img" id="">
+                        <a href="#slider1" class="button" id="button1"></a>
+                    </div>
+                    <div class="slide_div" id="slide_2">
+                        <img src="image/slide2.jpg" alt="" class="img" id="">
+                        <a href="#slider2" class="button" id="button2"></a>
+                    </div>
+                    <div class="slide_div" id="slide_3">
+                        <img src="image/slide3.jpg" alt="" class="img" id="">
+                        <a href="#slider3" class="button" id="button3"></a>
+                    </div>     
+                </div>
+            </div>
+
+            <div class="eventsSpace-about">
+                <p>Housed within a colonial building with sleek décor, stunning vintage interiors. 
+                    Energy Cafe is a multi-purpose venue that promises experiences beyond the ordinary.</p>
+            </div>
+            <!--yellow divider-->
+            <img id="space-background-top" src="image/yellow.png" alt="yellowbackground">
+        </div>
+
+        <!--Corporate and Private Events-->
+        <div class="eventSpace">
+            <img id="tree2" src="image/tree2.png" alt="tree">
+            <img id="butterfly" src="image/butterfly1.png">
+            <img id="deco" src="image/wedding-deco3.png">
+            <div class="eventsSpace-privatespace">
+                <h2>Corporate & <br/>Private Events</h2>
+                <p>Want to launch your product in a stylish setting? Looking to wow the crowd at your next celebratory dinner? 
+                    Or simply searching for a unique venue unlike any other?</p>
+                <p>Talk to us today about hosting your corporate or private events at 
+                    Energy Cafe, and no matter what you need &ndash; we&apos;ve you covered.</p>
+                <br>
+                <!--brown divider-->
+                <img id="wedding-top" src="image/brown-top.png">
+            </div>
+
+            <!--Wedding Parties-->
+            <div class="eventsSpace-weddingparty">
+                <h2>Wedding Parties</h2>
+                <p>The most romantic ay of your life deserves the most intimate spot in KL, 
+                    and you would be hard-pressed to find another venue as wedding-worthy as Energy Cafe.
+                <br><br>
+                    From beach vibe nuptials to boho-chic I Do&apos;s, talk to us today and we&apos;ll pull 
+                    out all the stops to make your wedding dreams come true.</p>
+                    <img id="wedding-bottom" src="image/brown-top.png">
+            </div>
+        </div>
+
+        <!--Outfield and Trolley-->
+        <div class="eventsSpace-area">
+            <div class="area">
+                <h2>The Outfield</h2>
+                <p>The semi-private area in the the back portion of the Energy Cafe's dining room can be reserved for up to 50 guests, 
+                    with both plated and menu options available for your event.</p>
+                <p><strong>Capacity: </strong>50</p>
+                <br>
+            </div>
+            <div class="area">
+                <h2>The Trolley</h2>
+                <p>Hop on the trolley! With the best view of  66-foot LED screen, 
+                    invite up to 40 guests for drink and food service and enjoy patio-friendly food and beverages.</p>
+                <p><strong>Capacity: </strong>40</p>
+            </div>
+        </div>
+
+        <!----Footer (same on all pages)----------------------------------------------------->
+        <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                        <li><a href="job.html">Job Vacancy</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termscondition.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="cake.html">Cake</a></li>
+                        <li><a href="drinks.html">Drink</a></li>
+                        <li><a href="pastries.html">Pastries</a></li>
+                        <li><a href="pasta.html">Pasta</a></li>
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
+                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
+                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!----------------------------------------------------------------------------------->
+        <script src="event.js"></script>
+        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
+        <script src="general.js"></script>  <!--apply to all pages (header)-->
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us Energy Cafe</title>
+        <link href="general.css" rel="stylesheet"/>
+        <link href="contactUs.css" rel="stylesheet"/> 
+        <link href="image/Logo.png" rel="shortcut icon"/>
+    </head>
+    <body>
+        <!----Header (same on all pages)----------------------------------------------------->
+        <header>
+            <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Services</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="icon-cart" onclick="audio.play();">
+                <img src="image/cart_icon.png" alt="shopping cart"/>
+                <span>0</span>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------->
+        <!--title and intro-->
+        <div class="title">
+            <img src="image/contactUsPic1.png" alt="contact title background" />
+            <h1>Contact Us</h1>
+        </div>
+        <!---Shopping cart module (same on all pages)---------------------------------------->
+        <div class="listProduct"></div>
+        <div class="cartTab">
+            <div class="cartTab-header">
+                <h1>Shopping Cart</h1>
+                <button class="close">X</button>
+            </div>
+            <div id="divider"></div>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="item/cake1.png" alt="">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="totalPrice">
+                        RM 200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <button class="checkOut" onclick="window.location.href = 'payment.html'" >Check Out</button>
+        </div>
+        <!---------------------------------------------------------------------------------->
+
+        <!--Section 1 Phone and Email-->
+        <section id="section1">
+            <div class="contactContainer">
+                <h3>Feel Free to Talk anytime!</h3>
+                <h2>Phone</h2>
+                <a href="tel:+60183115884">018-3339832</a>
+                <hr/>
+                <h2>Email</h2>
+                <a href="mailto:energycafe@gmail.com">energycafe@gmail.com</a>
+            </div>
+            <img src="image/contactUsPic2.png" alt="Women Phoning" />
+        </section>
+        <img id="checker" src="image/checkerRedWheat.png"/>
+
+        <!--Section 2 Location-->
+        <section id="section2">
+            <img src="image/contactUsPic3.jpg" alt="Cafe inferior" />
+            <div class="locationContainer">
+                <h3>Where to Find Us ?</h3>
+                <h2>Location</h2>
+                <div class="map-container">
+                    <!--Import google map-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.8807090400558!2d101.71209085!3d3.157485099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37d12d669c1f%3A0xc955b08cfc1aae29!2sSuria%20KLCC!5e0!3m2!1sen!2smy!4v1711462344330!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!--Animated text-->
+        <div class="sec">
+            <div class="animated-text">
+              <div class="line">GET IN TOUCH</div>
+              <div class="line">GET IN TOUCH</div>
+              <div class="line">GET IN TOUCH</div>
+              <div class="line">GET IN TOUCH</div>
+            </div>
+        </div>
+
+        <!--Feedback form-->
+        <div class="checker">  
+            <div class="wrapper">
+                <form id="survey" action="TQ.html" method="get">
+                    <h1>Feedback Form</h1>
+                    <div>
+                        <label for="Topic">Topic</label><br>
+                        <select id="Topic" name="topic">
+                            <option value="food">Food</option>
+                            <option value="service">Service</option>
+                            <option value="cleanliness">Cleanliness</option>
+                            <option value="inquiry">Inquiry</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="feedback">Feedback/Suggestion</label><br>
+                        <textarea id="feedback" rows="4" name="Feedback/Suggestion" placeholder="Feedback/Suggestion"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name" name="name" placeholder="Your name..">
+                    </div>
+                    <div class="input-box">
+                        <label for="Contact">Contact No.</label><br>
+                        <input type="text" id="contact" name="contact" placeholder="Contact No.">
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email</label><br>
+                        <input type="text" id="email" name="email" placeholder="Email">
+                    </div>
+                    <a href="TQ.html">
+                        <button type="submit" class="btn">Submit</button>
+                    </a>
+              </form>
+            </div>
+        </div>
+
+        <!----Footer (same on all pages)----------------------------------------------------->
+        <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                        <li><a href="job.html">Job Vacancy</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termscondition.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="cake.html">Cake</a></li>
+                        <li><a href="drinks.html">Drink</a></li>
+                        <li><a href="pastries.html">Pastries</a></li>
+                        <li><a href="pasta.html">Pasta</a></li>
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
+                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
+                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!----------------------------------------------------------------------------------->
+        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
+        <script src="general.js"></script>  <!--apply to all pages (header)-->
+    </body>
+
+</html>

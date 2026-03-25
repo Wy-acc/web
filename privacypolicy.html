@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EnergyCafe Privacy and Policy</title>
+        <link href="general.css" rel="stylesheet"/>
+        <link href="privacypolicy.css" rel="stylesheet" />
+        <link href="image/Logo.png" rel="shortcut icon" />
+        <style>
+            body {
+                background-color: #467897;
+            }
+
+            h1 {
+                color:#e39d43;
+                text-shadow: 6px 5px black;
+            }
+
+            .wrapAll h2 {
+                color:wheat;
+            }
+
+            .wrapAll .wrap {
+                background-color: #e7cd79;
+            }
+
+            .wrapAll .wrap p {
+                color:#467897;
+            }
+
+            .wrapAll .wrap p:hover {
+                color:#354950;
+            }
+        </style>
+    </head>
+    <body>
+        <!----Header (same on all pages)----------------------------------------------------->
+        <header>
+            <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Services</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="icon-cart" onclick="audio.play();">
+                <img src="image/cart_icon.png" alt="shopping cart"/>
+                <span>0</span>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------->
+        <!---Shopping cart module (same on all pages)---------------------------------------->
+        <div class="listProduct"></div>
+        <div class="cartTab">
+            <div class="cartTab-header">
+                <h1>Shopping Cart</h1>
+                <button class="close">X</button>
+            </div>
+            <div id="divider"></div>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="item/cake1.png" alt="">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="totalPrice">
+                        RM 200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <button class="checkOut" onclick="window.location.href = 'payment.html'" >Check Out</button>
+        </div>
+        <!---------------------------------------------------------------------------------->
+
+        <h1>Privacy Policy</h1>   
+        <div class="wrapAll">
+            <h2>Terms</h2>
+            <div class="wrap">
+                <p>By accessing the website https://energycafe.com, you agree to abide by these terms of service.
+                     If you do not agree with any of these terms, you are not permitted to use or access this site.</p>
+            </div>
+            <h2>License to Use</h2>
+            <div class="wrap">
+                <p>You are granted a limited, non-exclusive, non-transferable license to access and use the materials on Energy Cafe's website for personal, non-commercial purposes only. 
+                    You may not modify, copy, or distribute the materials for any commercial purpose without prior written consent from Energy Cafe.</p>
+            </div>
+            <h2>Disclaimer</h2>
+            <div class="wrap">
+                <p>The materials provided on Energy Cafe's website are for general information purposes only. 
+                    Energy Cafe makes no representations or warranties of any kind, express or implied, about the accuracy, completeness, reliability, or suitability of the information contained on the website.</p>
+            </div>
+            <h2>Limitations</h2>
+            <div class="wrap">
+                <p>Energy Cafe and its affiliates shall not be liable for any direct, indirect, incidental, special,
+                     or consequential damages arising out of the use or inability to use the materials on its website, even if Energy Cafe has been advised of the possibility of such damages.</p>
+            </div>
+            <h2>Accuracy of Materials</h2>
+            <div class="wrap">
+                <p>Energy Cafe strives to ensure the accuracy and timeliness of the information presented on its website but makes no guarantee that the materials are free from errors or omissions. Users are encouraged to verify any information before relying on it.</p>
+            </div>
+            <h2>Links</h2>
+            <div class="wrap">
+                <p>Energy Cafe may provide links to third-party websites for user convenience. However, Energy Cafe does not endorse or control the content of these linked sites and is not responsible for any damages or losses incurred from accessing or using them.</p>
+            </div>
+            <h2>Modifications</h2>
+            <div class="wrap">
+                <p>Energy Cafe reserves the right to update or modify these terms of service at any time without prior notice. By continuing to use the website after such changes, you agree to be bound by the revised terms.</p>
+            </div>
+            <h2>Governing Law</h2>
+            <div class="wrap">
+                <p>These terms and conditions are governed by the laws of Malaysia without regard to its conflict of law provisions. Any dispute arising out of or relating to these terms shall be subject to the exclusive jurisdiction of the courts in Malaysia.
+                    <br><br>By accessing and using Energy Cafe's website, you acknowledge that you have read, understood, and agreed to comply with these terms of service. If you do not agree with these terms, please refrain from using the website.
+                    </p>
+            </div>
+        </div>
+
+        <!----Footer (same on all pages)----------------------------------------------------->
+        <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                        <li><a href="job.html">Job Vacancy</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termscondition.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="cake.html">Cake</a></li>
+                        <li><a href="drinks.html">Drink</a></li>
+                        <li><a href="pastries.html">Pastries</a></li>
+                        <li><a href="pasta.html">Pasta</a></li>
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
+                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
+                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!----------------------------------------------------------------------------------->
+        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
+        <script src="general.js"></script>  <!--apply to all pages (header)-->
+    </body>
+</html>

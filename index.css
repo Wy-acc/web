@@ -1,0 +1,675 @@
+body{
+    background:#e39d43;
+}
+
+/*title and intro*/
+.home{
+    display: flex;
+    height: 132dvh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to top,#D2E2FB 30%,#e39d43);
+}
+.home img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+    height: 110dvh;
+}
+.home .title{
+    position: absolute;
+    top: 13%;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    color:#2b3742;
+    font-size: 75px;
+    font-family: "Oleo Script", sans-serif;
+    text-shadow: 5px 4px #fbdecf;
+}
+.home .title2{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #8c5133;
+    top: 24%;
+    bottom: 40%;
+    font-size: 28px;
+    letter-spacing: 5px;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+/* About Us */
+.section1 {
+    background-color: #455957;
+    justify-content: center;
+	height: 550px;
+    bottom: 0%;
+}
+.section1 h2 {
+    padding: 20px 270px;
+    color: wheat;
+    padding: 20px auto;
+    font-size: 60px;
+    font-family: "Oleo Script", sans-serif;
+    text-shadow: 5px 4px #47ab86; 
+    letter-spacing: 1px;
+}
+.section1 p {
+    color: #47abab;
+    padding: 10px 400px 25px 100px;
+    text-align: center;
+    right: 50%;
+    font-size: 19px;
+    font-family: "Roboto Slab", sans-serif;
+}
+.section1 p span:hover{
+    padding-left: 10px;
+    transition: all 0.5s ease;
+    color:wheat;
+    font-weight: bold;
+}
+.section1 h2, .section1 p span{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 45%;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity:1;
+    }
+}
+.section1 button {
+    background-color: #44aaac;
+    color: #f4dcab;
+    font-family: "Kaushan Script", serif;
+    margin: 5px 275px;
+    height: 60px;
+    width: 160px;
+    font-size: 25px;
+    font-weight: 600;
+    box-shadow: 3px 4px;
+    border-radius: 12px;
+}
+.section1 button:hover {
+    cursor: pointer;
+    animation: jelly 0.5s;
+}
+@keyframes jelly{
+    0%,
+    100%{
+        transform:scale(1,1);
+    }
+    25% {
+        transform: scale(0.9,1.1);
+    }
+    50%{
+        transform: scale(1.1,0.9);
+    }
+    75%{
+        transform:scale(0.95,1.05);
+    }
+}
+.coffee img{
+    float: right;
+    top: 0%;
+    padding: 30px;
+    width: 40%;
+    position: relative; 
+}
+
+/* autoplay scroll text */
+.section{
+    position: relative;
+    width:100%;
+    overflow:hidden;
+    background-color:#f1d8a9;
+}
+.section .scroll, .section .scroll2{
+    width:100%;
+    display: flex;
+}
+.section .scroll div{
+    color: #e39d43;
+    font-size: 4em;
+    background: #f1d8a9;
+    white-space: nowrap;
+    font-weight: 500;
+    text-transform: uppercase;
+    animation: animate 40s linear infinite;
+    animation-delay: -40s;
+    font-family: "Messenger Texture", sans-serif;
+    text-shadow: 4px 5px #7b3f2e;
+    font-style: italic;
+}
+.section .scroll2 div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:#f1d8a9;
+    font-size: 3em;
+    background: #398583;
+    white-space: nowrap;
+    font-weight: 500;
+    text-transform: uppercase;
+    animation: animate 40s linear infinite;
+    animation-delay: -40s;
+    font-family: "Messenger Texture", sans-serif;
+    text-shadow: 4px 5px #7b3f2e;
+    font-style: italic;
+}
+.section .scroll div:nth-child(2), .section .scroll2 div:nth-child(2){
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+}
+.section .scroll div span{
+    -webkit-text-stroke: 2px #000 ;
+    color: transparent;
+}
+.section .scroll2 div span {
+    -webkit-text-stroke: 2px #ce3f2c ;
+    color:transparent;
+}
+@keyframes animate
+{
+    from
+    {
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate2{
+    from
+    {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-200%);
+    }
+}
+.section .scroll.text1, .section .scroll2.text2{
+    box-shadow: 0 5px 15px rgb(0,0,0,.5);
+}
+
+/*Section2 (Image Map) */
+p.mapMention{
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: "Oleo Script", sans-serif;
+    color: #ce3f2c;
+    text-shadow: 3px 4px #f7bf41;
+    letter-spacing: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 6s steps(38) infinite,cursor .4s step-end infinite;
+}
+.mapMention{
+    display: inline-block;
+}
+@keyframes cursor{
+    50%{border-color :transparent}
+}
+@keyframes typing{
+    from{
+        width:0
+    }
+}
+.section2 {
+    top: 0%;
+    background-color:#e39d43;
+    max-width: 1020px;
+    justify-content: center;
+    height:900px;
+}
+.section2 h2 {
+    color: #232946;
+    margin: 0 50px;
+    padding: 70px 60px;
+    font-size: 60px;
+    position: relative;
+}
+.section2 h4 {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-left: 295px;
+    width: 700px;
+    font-size: 55px;
+    color: #e0c55c;
+    font-family: "Oleo Script", sans-serif;
+    text-shadow: 5px 4px #903536; 
+    letter-spacing: 1px;
+}
+.section2 h5 {
+    color: wheat;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-left: 295px;
+    width: 700px;
+    font-size: 23px;
+    font-style: italic;
+    text-shadow: 5px 4px #903536;
+    font-family: "Oleo Script", sans-serif;
+}
+.section2 h6 {
+    color: #232946;
+    text-align: center;
+    font-size: 23px;
+    position: relative;
+}
+
+.section2 p{
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: right;
+    color: #6c3322;
+    padding: 5px 10px 0 0;
+}
+
+.section2 .decorate {
+    width: 350px;
+    position: relative;
+    max-height:70px;
+    padding: 20px auto;
+    margin-left: 210px;
+}
+
+/* Slideshow */
+.section2 .slideshow-container {
+    position: relative;
+}
+
+/* Slides (Review) */
+.section2 .mySlides {
+    display: none;
+    padding-top: 5px;
+    text-align: center;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -130px;
+    padding: 100px;
+    color: #888;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+/* Position the "next button" to the right */
+.section2 .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.section2 q, .bestSeller p {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+    color:#6c3322;
+    letter-spacing: 1px;
+}
+.section2 .author {
+    color: wheat;
+    font-family: "Roboto Slab", sans-serif;
+    text-align: center;
+}
+
+/* Card hover */
+.container_c{
+    display: grid;
+    place-items: center;
+    padding-block: 5rem;
+    background-color:#e39d43 ;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+.card_container{
+    display: grid;
+    row-gap: 3.5rem;
+}
+.card_article{
+    position: relative;
+    overflow: hidden
+}
+.card_img{
+    width: 328px;
+    border-radius: 1.5em;
+}
+.card_data{
+    width:280px;
+    background-color: wheat;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0,0%,0%,.15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+.card_description {
+    display: block;
+    font-size: .813rem;
+    margin-bottom: .25rem;
+    color: #6c3322;
+    font-family: "Roboto Slab", sans-serif;
+}
+.card_title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(hsl(0,0%,15%));
+    margin-bottom: .75rem;
+    font-size: 18px;
+    color: #6c3322;
+    font-family: "Messenger Texture", sans-serif;
+    text-transform: capitalize;
+    text-shadow: 2px 3px #e39d43
+}
+.card_button{
+    text-decoration: none;
+    font-size: .813rem;
+    font-weight: 500;
+    color: hsl(82,60%,28%);
+}
+.card_button:hover{
+    text-decoration: underline;
+}
+.card_article:hover .card_data{
+    animation:show-data 1s forwards;
+    opacity:1;
+    transition: opacity .3s;
+}
+.card_article:hover{
+    animation: remove-overflow 2s forwards;
+}
+.card_article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+.card_article:not(:hover) .card_data{
+    animation: remove-data 1s forwards;
+}
+@keyframes show-data{
+    50%{
+        transform:translateY(-10rem);
+    }100%{
+        transfrom:translateX(-7rem);
+    }
+}
+@keyframes remove-overflow{
+    to{
+        overflow:initial;
+    }
+} 
+@keyframes remove-data{
+    0%{
+        transform:translateY(-7rem)
+    }50%{
+        transform:translateY(-10rem)
+    }100%{
+        transform: translateY(.5rem);
+    }
+}
+@keyframes show-overflow{
+    0%{
+        overflow:initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow:hidden;
+    }
+}
+
+@media screen and (max-width:340px){
+    .container_c{
+        margin-inline:1rem;
+   }
+   .card_data{
+    width:250px;
+    padding:1rem;
+   }
+}
+@media screen and (min-width:640px){
+    .card_container{
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1.5rem;
+    }
+    .card_img{
+        width:300px;
+    }
+    .container_c{
+        height:70vh;
+    }
+}
+
+/* Home video */
+video{
+    min-width:768px;
+    max-width:1024px;
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+/* Track Styles */
+::cue {
+    background-color: transparent;
+    text-shadow: 2px 2px 2px #e5d6bd;
+    color: #242947;
+    font: 1.2em "Roboto Slab";
+ }
+ ::cue(.Title) {
+    font-family: "Scripto";
+    font-size: 2em;
+    color: #e5d6bd;
+    text-shadow: 5px 5px #242947;
+ }
+ ::cue(.Ending) {
+    font-family: "Messenger Texture", sans-serif;
+    background-color: #f44e21;
+    text-shadow: 4px 4px 2px #e5d6bd;
+    font-size: 2.7em;
+ }
+
+ /* Best Seller*/
+.bestSeller{
+    padding-top: 35px;
+}
+.bestSeller h1 {
+    color: #e0c55c;
+    margin: 20px 20px 0px 70px;
+    font-size: 60px;
+    font-family: "Oleo Script", sans-serif;
+    text-shadow: 5px 4px #47ab86; 
+    text-align: left;
+    letter-spacing: 2px;
+ }
+.bestSeller span{
+    color: #e0c55c;
+    font-size: 30px;
+    font-family: "Oleo Script", sans-serif;
+    text-shadow: 5px 4px #f44e21; 
+    text-align: left;
+    letter-spacing: 3.5px;
+    margin-left: 30px;
+ }
+.BestSellerCtn{
+    overflow: hidden;
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    background-image: url(image/checkerYellowGreen2.png);
+    margin: 30px 35px auto;
+    border-radius: 15px;
+}
+.slider{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+    
+}
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(250px);
+}
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: 1s;
+}
+.slider span:hover img{
+    transform:translateY(-35px) scale(1.2);
+}
+
+ /* pop out */
+ .best-preview{
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 120vh;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+ }
+.best-preview .preview{
+    display: none;
+    background-image: url(image/checkerGreenRed.png);
+    padding: 0.5rem;
+    text-align: center;
+    width: 290px;
+    height: 70vh;
+    position: relative;
+    border-radius: 10px;
+}
+.best-preview .preview.active{
+    display: inline-block;
+}
+.best-preview .preview img{
+    width: 70%;
+}
+.best-preview .preview h3{
+    color: #e0c55c;
+    font-size: 25px;
+    font-family: "Oleo Script", sans-serif;
+    text-shadow: 1px 2px orange;
+    letter-spacing: 3.5px;
+}
+.best-preview .preview .stars{
+    width: 28px;
+    display: inline-block;
+    display: flex;
+    margin: 0.8rem;
+    margin-left: 87px;
+}
+.best-preview .preview .stars img{
+    margin-right: 6px;
+}
+.best-preview .preview p{
+    font-size: 1.0rem;
+    color: wheat;
+    letter-spacing: 1.5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.best-preview .preview .price{
+    color: gold;
+    font-size: 1.3rem;
+    font-family: "Oleo Script", sans-serif;
+    margin: 5px auto;
+}
+.best-preview .preview a{
+    display: inline-block;
+    padding: 7px 3px 3px 3px;
+    width: 10rem;
+    height: 2.6rem;
+    background: wheat;
+    color: brown;
+    font-size: 1.2rem;
+    border: 0.1rem solid gold;
+    border-radius: 00.5rem;
+    box-shadow: 3px 4px brown;
+    font-family: "Scripto"
+}
+.best-preview .preview a:hover{
+    background: none;
+    color: #333;
+    border: none;
+    transition: all 1s ease;
+}
+.best-preview .preview .xmark{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 70px;
+    cursor: pointer;
+}
+
+/* Word below best seller */
+.bestSeller p{
+    margin-top: -13px;
+    font-size: 20px;
+    width: 100%;
+    font-family: "Oleo Script", sans-serif;
+    color: #ce3f2c;
+    text-shadow: 3px 4px #f7bf41;
+    letter-spacing: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 6s steps(60) infinite,cursor .5s step-end infinite;
+}
+.bestSeller{
+    display: inline-block;
+    text-align: center;
+}
+@keyframes cursor{
+    50%{border-color: transparent}
+}
+@keyframes typing{
+    from{
+        width:0
+    }
+}
+/*Hand image*/
+.hand{
+    margin-top: -200px;
+    width:220px;
+}
+ 

@@ -1,0 +1,246 @@
+html {
+    background-color: hsl(40, 77%, 81%);
+}
+
+/*title and intro*/
+.eventstitle {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    animation: fadeInUp 1s;
+}
+#title-img {
+    height: 550px;
+    width: 1020px;
+    position: relative;
+    object-fit: cover;
+    opacity: 70%;
+}
+.eventstitle h1 {
+    position: absolute;
+    text-align: center;
+    top: 250px;
+    font-family: "Scripto", 'Times New Roman', Times, serif;
+    font-size: 6em;
+    color: #44aaac;
+    text-shadow: 4px 5px #7c3d2a;
+    animation: fadeInUp 1s;
+}
+
+/*About the space*/
+#about-background-top {
+    position: absolute;
+    width: 1020px;
+    top: 450px;
+    background-position: center bottom;
+}
+.eventsAbout {
+    background-color: #f4dba9;
+}
+.eventsSpace-about {
+    position: relative;
+}
+.eventsSpace-about h2 {
+    font-size: 45px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Messenger Texture';
+    color: #7b3f2e;
+    text-shadow: 3px 4px #e39d43;
+    font-weight: 100;
+}
+.eventsSpace-about p {
+    padding-top: 40px;
+    margin-left: 260px;
+    font-size: 25px;
+    text-align: center;
+    width: 500px;
+    padding-bottom: 20px;
+    color: #7b3f2e;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+/*Image slide*/
+.container {
+    width: 1020px;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    /* margin: auto; */
+}
+.imgContainer {
+    width: 620px;
+    height: 600px;
+    position: absolute;
+    display: flex;
+    transition: transform 1s ease;
+    padding-left: 100px;
+}
+.slide_div {
+    flex: 0 0 240px;
+    margin: 0 15px;
+    display: flex;
+    transition: transform 1s ease;
+    justify-content: center;
+    align-items: center;
+}
+.slide_div img {
+    height: 300px;
+    width: auto;
+    transition: transform 0.7s ease;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.slide_div img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+.slide_div img:focus-within {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.eventSpace {
+    position: relative;
+}
+
+/*Graphic CSS*/
+#tree2 {
+    position: absolute;
+    right: 0;
+    width: 25%;
+    height: 350px;
+    pointer-events: none;
+}
+#butterfly {
+    position: absolute;
+    right: 0;
+    top: -60px;
+    width: 30%;
+    height: 30%;
+    pointer-events: none;
+}
+#deco {
+    position: absolute;
+    bottom: -60px;
+    left: 7%;
+    width: 33%;
+    pointer-events: none;
+}
+
+/*Corporate and Private Events*/
+#space-background-top {
+    top: 150px;
+    width: 1020px;
+}
+.eventsSpace-privatespace {
+    background-color: #e8b430;
+    color: #7b3f2e;
+}
+.eventsSpace-privatespace h2 {
+    text-align: left;
+    margin-left: 100px;
+    font-size: 40px;
+    margin-top: -120px;
+    text-shadow: 3px 4px #662425;
+    font-family: 'Messenger Texture';
+    font-weight: 150;
+    color: #398583;
+}
+.eventsSpace-privatespace p {
+    text-align: left;
+    margin-top: 45px;
+    margin-left: 100px;
+    font-size: 1.35em;
+    width: 500px;
+    margin-bottom: 50px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+}
+
+/*Wedding Parties*/
+#wedding-top {
+    background-repeat: no-repeat;
+    width: 1020px;
+}
+.eventsSpace-weddingparty {
+    height: 500px;
+    background-color: #7b3f2e;
+    margin-top: -1%;
+    box-sizing: border-box;
+    display: flex;
+}
+.eventsSpace-weddingparty h2 {
+    text-align: left;
+    margin-left: 17%;
+    padding-top: 80px;
+    font-size: 40px;
+    color: #e39d43;
+    text-shadow: 3px 4px #412119;
+    font-family: 'Messenger Texture';
+    font-weight: 150;
+}
+.eventsSpace-weddingparty p {
+    font-size: 1.2em;
+    padding-right: 50px;
+    padding-top: 50px;
+    float: left;
+    width: 550px;
+    margin: 5%;
+    text-align: justify;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 400;
+    color: #e39d43;
+}
+#wedding-bottom {
+    width: 1020px;
+    position: absolute;
+    margin-top: 490px;
+    transform: rotateX(180deg);
+}
+
+/*Outfield and Trolley*/
+.eventsSpace-area {
+    width: 1020px;
+    font-size: 25px;
+    box-sizing: border-box;
+    display: flex;
+    background-image: url(image/area-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 1024px;
+}
+.area {
+    float: left;
+    flex: 50%;
+    background-color: rgba(204, 204, 204, 0.8);
+}
+.area h2 {
+    padding-top: 170px;
+    font-family: 'Messenger Texture';
+    font-weight: 150;
+    color: #903536;
+    text-shadow: 3px 4px rgb(37, 37, 107);
+}
+.area p {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #662425;
+}
+.area h2, .area p {
+    margin: 10%;
+    text-align: justify;
+}
+
+
+footer {
+    margin-top: 0px;
+}

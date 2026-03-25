@@ -1,0 +1,353 @@
+/*Import fonts*/
+@font-face {
+    font-family: "Fira Sans";
+    src: url('font/Fira_Sans/FiraSans-Regular.ttf') format('truetype'),
+    url('font/Fira_Sans/FiraSans-ExtraBold.ttf') format('truetype'),
+    url('font/Fira_Sans/FiraSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Kaushan Script";
+    src: url('font/Kaushan_Script/KaushanScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Lora;
+    src: url('font/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Oleo Script";
+    src: url('font/Oleo_Script/OleoScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url('font/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url('font/Roboto_Condensed/RobotoCondensed-Regular.ttf') format('truetype'),
+    url('font/Roboto_Condensed/RobotoCondensed-Medium.ttf') format('truetype'),
+    url('font/Roboto_Condensed/RobotoCondensed-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Messenger Texture";
+    src: url('font/MessengerTexture-GOX6D.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "Scripto";
+    src: url('font/Scripto-2OR2v.ttf') format('truetype');
+}
+
+/*Header shop cart icon hover animation*/
+@keyframes shake {
+    from {
+        transform: rotate(15deg);
+    }
+    to {
+        transform: rotate(-15deg);
+        transform-origin: center center;
+    }
+}
+
+/*Intro and Title animation upon loading page*/
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+
+html{
+    overflow-x: hidden;
+}
+
+/*Reset elements*/
+*,
+*:before,
+*:after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Set center and designed for 1024 x 768 px screen*/
+body{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1020px;
+	min-width: 640px;
+}
+
+/*Header*/
+header{
+    position:fixed;
+    top:0;
+    width: 1020px;
+    display:flex;
+    align-items: center;
+    transition: 0.6s;
+    padding: 25px 105px;
+    z-index: 90;
+}
+header ul{
+    position: relative;
+    display: flex;
+    left: 10%;
+    width: 100%;
+}
+header ul li{
+    position: relative;
+    list-style:none;
+    
+}
+header ul li a{
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    margin: 0 15px;
+    top:20%;
+    text-decoration:none;
+    color:#f1d8a9;
+    letter-spacing:2px;
+    font-weight: bold;
+    transition:1.0s;
+    font-size:large;
+}
+header.sticky{
+    padding:0px 105px;
+    background: #398583;
+    max-width: 1020px;
+	
+}
+header.sticky ul li a{
+    color: #f4dcab;
+    text-shadow: rgba(0,0,0,0.3);
+}
+.logo img{
+    position:relative;
+    width: 180px;
+    height: 100px;
+    margin:0 auto;
+    left:-35%;
+}
+
+/* Header Cart Icon */
+.icon-cart {
+    position: relative;
+    left: 5%;
+}
+.icon-cart img:hover {
+    animation: shake 0.2s ease-in-out;
+}
+.icon-cart img {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    margin-left: 12px;
+}
+.icon-cart span {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: #f4dcab;
+    justify-content: center;
+    align-items: center;
+    color: #7c3d2a;
+    font-family: "Messenger Texture", serif;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left:80%
+}
+
+/*Header underline (hover effect)*/
+header ul li a:after{
+    content:"";
+    position:absolute;
+    background-color: #e39d43;
+    height: 3px;
+    width:0;
+    left:0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+header ul li a:hover:after{
+    width:100%;
+}
+
+/*Shopping Cart Tab Section*/
+.cartTab {
+    width: 400px;
+    border-radius: 20px;
+    background-color: #47ab86;
+    background-image: url(image/clean-gray-paper.png);
+    position: fixed;
+    inset: 0 -400px 0 auto;    /*Make it -400px to right to hide it first*/
+    display: grid;
+    grid-template-rows: 75px 40px 1fr 70px;
+    transition: 0.5s;
+    z-index: 100;
+}
+body.showCart .cartTab {
+    inset: 0 0 0 auto;
+}
+.cartTab-header {
+    display: flex;
+}
+.cartTab-header h1 {
+    padding: 20px;
+    margin: 0;
+    font-family: "Scripto", serif;
+    font-size: 2.6em;
+    font-weight: 200;
+    text-shadow: 4px 4px #d4463f;
+    color: #ffc768;
+}
+.cartTab-header .close {
+    font-family: "Messenger Texture";
+    font-size: 2.5em;
+    color: #d4463f;
+    position: static;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px auto;
+    background-color: transparent;
+    border: none;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.cartTab-header .close:hover {
+    color: #ffc768;
+}
+.cartTab div#divider {
+    height: 40px;
+    width: 100%;
+    background-image: url(image/checkerYellowGreen.png);
+    background-size: 70%;
+}
+.checkOut {
+    background-color: #d4463f;
+    color: #ffc768;
+    font-family: "Scripto", serif;
+    font-size: 2.3em;
+    text-shadow: 2px 2px #7c3d2a;
+    border: none;
+    border-radius: 0px 0px 20px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.checkOut:hover {
+    background-color: #ffc768;
+    color: #d4463f;
+    border: none;
+}
+.cartTab .listCart .item img {
+    width: 100%;
+}
+.cartTab .listCart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    font-family: "Roboto Slab", serif;
+    color: #6c3322;
+    font-weight: 600;
+}
+.cartTab .listCart .quantity span {
+    display: inline-block;
+    font-weight: 900;
+    width: 25px;
+    height: 25px;
+    background-color: #F1D8A9;
+    color: #6c3322;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cartTab .listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    font-weight: 600;
+}
+.cartTab .listCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+.cartTab .listCart {
+    overflow: auto;
+}
+.cartTab .listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+/*footer section*/
+footer{
+    background-color: #47abab;
+    padding: 70px 120px;
+    margin: auto;
+    margin-top: 100px;
+}
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer ul{
+    list-style: none;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    position: relative;
+    font-size: 18px;
+    color: #edb368;
+    font-weight: 100;
+    font-family: "Messenger Texture", sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px #839175 ;
+}
+.footer-col h4::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    bottom:-10px;
+    background-color: #ffffff;
+    height: 2px;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: bold;
+    color:#903536;
+    display:block;
+    transition: all 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-style: italic;
+}
+.footer-col ul li a:hover{
+    color:#e39d43;
+    padding-left: 10px;
+}
+.social-links img{
+    height: 27px;
+    width: 30px;
+    cursor: pointer;
+    margin:0 5px;
+}

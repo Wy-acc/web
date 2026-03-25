@@ -1,0 +1,290 @@
+body{
+    font-family: "Roboto Condensed";
+    background: #f1d8a9;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+header ul li a {
+    color: #7b3f2e;
+}
+
+/*title and intro*/
+.title {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    animation: fadeInUp 1s;
+}
+.title img {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    transform: scale(1.2);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    filter: opacity(0.7);
+}
+.title h1 {
+    position: absolute;
+    font-family: "Scripto", 'Times New Roman', Times, serif;
+    font-size: 6em;
+    color: #44aaac;
+    text-shadow: 4px 5px #7c3d2a;
+    padding: 70px 60px;
+    text-align: center;
+    top: 200px;
+    border: double 5px #7c3d2a;
+    background-color: rgba(244,220,171,0.6);
+    animation: fadeInUp 1s;
+}
+
+/*Section 1 Contact information (Phone and Email)*/
+section#section1 {
+    display: flex;
+    margin-top: 50px;
+}
+.contactContainer{
+    width: 50%;
+    padding: 40px 20px;
+    border: 5px solid #9c1f25;
+    text-align: center;
+    margin: 3%;
+}
+.contactContainer hr {
+    height: 5px;
+    background-color: #9c1f25;
+    border: none;
+}
+.contactContainer h3, .locationContainer h3{
+    font-family: "oleo script";
+    color: #47abab;
+    text-shadow: #7b3f2e 3px 2.8px;
+    font-size: 3em;
+    padding-bottom: 10px;
+}
+.contactContainer h2, .locationContainer h2{
+    text-align: center;
+    font-family: "Messenger Texture";
+    font-size: 27px;
+    font-weight: 100;
+    color: #9c1f25;
+    text-shadow: 4px 5px #e0c55c;
+    padding-top: 30px;
+}
+.contactContainer a{
+    font-size: 20px;
+    color: #333;
+    line-height: 3em;
+    text-decoration: none;
+}
+.contactContainer a:hover{
+    color: #3b8f8f;
+    font-family: roboto slab;
+}
+section#section1 img {
+    width: 40%;
+    height: 40%;
+    border-radius: 5%;
+    margin-top: 100px;
+}
+
+/*checkerboard divider*/
+img#checker {
+    padding-left: 5%;
+}
+
+/*Section 2 Location*/
+section#section2 {
+    display: flex;
+    width: 95%;
+    margin: 40px auto;
+    background-color: #ecb460;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+#section2 img {
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+}
+.locationContainer {
+    text-align: center;
+    padding: 40px 20px;
+    text-align: center;
+    width: 50%;
+}
+.locationContainer h2 {
+    margin-bottom: 20px;
+    text-shadow: 4px 5px #fce4c2;
+}
+.map-container{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 70%;
+}
+/*Google Map*/
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/*Animated text*/
+.animated-text{
+    color: #f1d8a9;
+    font-family: "Messenger Texture", sans-serif;
+    font-weight: 100;
+    width: 50%;
+    margin: auto;
+    background: #9a1616;
+    padding: 0 20px; 
+    height: 60px;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-top: 100px;
+}
+.animated-text .line{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    line-height: 60px;
+}
+.animated-text .line:first-child{
+    animation: anim 12s infinite;
+}
+@keyframes anim{
+    0%{
+        margin-top: 0;
+    }
+    16%{
+        margin-top: -60px;
+    }
+    33%{
+        margin-top: -120px;
+    }
+    50%{
+        margin-top: -180px;
+    }
+    66%{
+        margin-top: -120px;
+    }
+    82%{
+        margin-top: -60;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+/*Form checkerboard background*/
+.checker{
+    background-image: url(image/contactCheckerBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    padding: 45px 0px;
+    align-items: center;
+    max-width: 90%;
+    margin-left: 47px;
+}
+
+/*Form CSS*/
+.wrapper{
+    width: 90%;
+    border: 10px solid #115a9e;
+    border-radius: 10px;
+    background-color: #FCE4C2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .9);
+    padding: 30px 90px;
+    margin: 20px auto;
+}
+.wrapper div{
+    padding: 7px;
+}
+.wrapper h1{
+    font-family: "Messenger Texture", sans-serif;
+    font-size: 3em;
+    font-weight: 200;
+    text-align: center;
+    color: #9c1f25;
+    text-shadow: 3px 3px #115a9e;
+}
+.wrapper label{
+    font-family: "Oleo script", serif;
+    font-size: 1.5em;
+    margin: 11px;
+    color: #7b3f2e;
+}
+select{
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    background: #fff;
+    color: #7b3f2e;
+    font-weight: 600;
+    padding: 13px 13px;
+}
+input[type=text]{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"roboto Condensed";
+}
+.wrapper.input-box{
+    width: 100%;
+    height: 50px;
+    background: #839175;
+    margin: 30px 0;
+}
+.input-box input, textarea{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #7b3f2e;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #333;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+    color: #645c50;
+}
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.wrapper .btn{
+    width: 50%;
+    height: 45px;
+    background: #fff;
+    border: 2px solid;
+    border-color: #7b3f2e;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #7b3f2e;
+    font-weight: 600;
+    margin: 20px 25%;
+}
+.wrapper .btn:hover{
+    background-color: #7b3f2e;
+    color: #f1d8a9;
+}

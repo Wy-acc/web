@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Energy Cafe Job</title>
+        <link href="general.css" rel="stylesheet"/>
+        <link href="job.css" rel="stylesheet"/>
+        <link href="image/Logo.png" rel="shortcut icon"/>
+    </head>
+    <body>
+        <!----Header (same on all pages)----------------------------------------------------->
+        <header>
+            <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Services</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="icon-cart" onclick="audio.play();">
+                <img src="image/cart_icon.png" alt="shopping cart"/>
+                <span>0</span>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------->
+        <!--title and intro-->
+        <div class="title">
+            <img src="image/job_title.jpeg" alt="job hiring">
+            <h1>Job Vacancy</h1>
+        </div>
+        <!---Shopping cart module (same on all pages)---------------------------------------->
+        <div class="listProduct"></div>
+        <div class="cartTab">
+            <div class="cartTab-header">
+                <h1>Shopping Cart</h1>
+                <button class="close">X</button>
+            </div>
+            <div id="divider"></div>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="item/cake1.png" alt="">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="totalPrice">
+                        RM 200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <button class="checkOut" onclick="window.location.href = 'payment.html'" >Check Out</button>
+        </div>
+        <!---------------------------------------------------------------------------------->
+        
+        <!--intro description-->
+        <h4 class="intro">Energy Café is currently seeking <br><span class="point">a dynamic and passionate individual</span>  to join our team.</h4>
+        <p>If you are enthusiastic about providing quality service and promoting sustainability, <br>
+            We invite you to apply and become part of our mission-driven team at Energy Café.</p>
+
+        <!-- Available position  -->
+        <h5 class="JobSec">Available Position</h5>
+        <p>"Hey, Come and Join Us !"</p>
+        <div class="wrapper">
+            <div class="card">
+                <div class="card_side card_side--front">
+                    <div class="card_picture"></div>
+                    <h1 class="card_heading"><span>Barista</span><br>requirement</h1>
+                </div>
+                <div class="card_side card_side--back">
+                    <div class="cta">
+                        <h2>requirement</h2>
+                        <div class="cta_text">
+                            <p>Age: 18+<br><br>Experience: Barista or food service experience preferred.<br><br>Coffee Knowledge: Proficiency in preparing various coffee beverages, including espresso-based drinks and specialty brews.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_side card_side--front">
+                    <div class="card_picture" style=" background-image: linear-gradient(rgb(24,24,24),rgb(24,24,24)),url(image/card_crew.jpg);"></div>
+                    <h1 class="card_heading"><span>Crew</span><br>requirement</h1>
+                </div>
+                <div class="card_side card_side--back">
+                    <div class="cta">
+                        <h2>requirement</h2>
+                        <div class="cta_text">
+                            <p>Age: 18+<br><br>Experience: Previous experience in a kitchen environment, preferably in a cafe or restaurant setting.<br><br>
+                                Food Safety Knowledge: Understanding of food safety regulations and practices to maintain cleanliness and hygiene standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_side card_side--front">
+                    <div class="card_picture" style=" background-image: linear-gradient(#f7bf41,rgb(24,24,24)),url(image/card_pt.jpg);"></div>
+                    <h1 class="card_heading"><span>Part-Timer</span><br>requirement</h1>
+                </div>
+                <div class="card_side card_side--back">
+                    <div class="cta">
+                        <h2>requirement</h2>
+                        <div class="cta_text">
+                            <p> Age: Meet legal requirements<br><br> Experience: Customer service background beneficial.<br><br>Attitude: Positive attitude, strong work ethic, and willingness to learn on the job</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recruitment Process -->
+        <h5 class="JobSec">Recruitment Process</h5>
+        <div class="apply_process">
+            <div class="recruitment">
+                <div class="recruit">
+                    <h5>Apply Online</h5>
+                    <p>We will review your application and contact you for interview if you are the right person we're looking for.</p>
+                </div>
+            </div>  
+            <img src="image/arrow.png" alt="arrow">
+            <div class="recruitment">     
+                <div class="recruit">   
+                    <h5>Interview</h5>
+                    <p>We have prepared to ask you some thoughtful questions. Be sure to get prepared for the interview section.</p>
+                </div> 
+            </div>
+            <img src="image/arrow.png" alt="arrow">
+            <div class="recruitment">   
+                <div class="recruit">    
+                    <h5>Decision and Offer</h5>
+                    <p>The team will review and offer to the candidate which we feel is the best fit.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Staff Interview -->
+        <h5 class="JobSec">Staff Interview</h5>
+        <div class="staff"style="margin-top: -30px;" >
+            <div class="interview">
+                <img src="image/s1_barista.png" alt="barista">
+                <h6>Barista</h6>
+                <h5>Q.  How has your experience been since joining Energy Cafe, 
+                    and what aspects of the role do you find most fulfilling?</h5>
+            </div>
+            <p>Since joining Energy Cafe, I've found immense satisfaction in crafting delicious coffee beverages and seeing the smiles on our customers' faces. I particularly enjoy the artistry involved in creating latte designs.</p>
+        </div>
+        <div class="staff">
+            <div class="interview">
+                <img src="image/s2_crew.png" alt="kitchen crew">
+                <h6>Kitchen Crew</h6>
+                <h5>Q.  Since joining Energy Cafe, what have you found to be the most enjoyable part of your role?</h5>
+            </div>
+            <p>The most enjoyable aspect of my role at Energy Cafe is interacting with our diverse customer base and creating a welcoming atmosphere. It's rewarding to see our guests leave satisfied with their experience</p>
+        </div>
+        <div class="staff">
+            <div class="interview" >
+                <img src="image/s3_waiter.png" alt="waiter">
+                <h6>Waiter</h6>
+                <h5>Q.  How do you handle feedback from customers, and what steps do you take to continuously improve your service skills?</h5>
+            </div>
+            <p>When a guest asked for gluten-free options, I not only provided them with suitable menu choices but also took the initiative to inform them about our gluten-free preparation practices, which they appreciated.</p>
+        </div>
+        <div class="staff" style="border-bottom: none;">
+            <div class="interview">
+                <img src="image/s4_waiter.png" alt="waiter">
+                <h6>Waiter</h6>
+                <h5>Q.  What has been the highlight of your experience at Energy Cafe since you joined the team?</h5>
+            </div>
+            <p>Since joining Energy Cafe, I've enjoyed the fast-paced nature of the job and the opportunity to work alongside a dedicated team. It's gratifying to contribute to creating memorable dining experiences for our guests.</p>
+        </div>  
+
+        <!-- FAQ -->
+        <h5 class="JobSec">Any Question?</h5>
+        <section>
+            <h1 class="faqTitle">FAQ'S</h1>
+            <div class="questionsCtn">
+                <img src="image/checkerYellowWheat.png" class="decoJob">
+                <img src="image/faqImg.png" class="powerLady">
+                <div class="question">
+                    <button>
+                        <span>What is the job Scope ?</span>
+                        <img src="image/downarrow.png" class="faqImg">
+                    </button>
+                    <p>The job scope at our cafe includes greeting customers, taking orders, preparing food and beverages, maintaining cleanliness, handling transactions, 
+                        and providing excellent customer service.</p>
+                </div>
+                <div class="question">
+                    <button>
+                        <span>How is the working environment ?</span>
+                        <img src="image/downarrow.png" class="faqImg">
+                    </button>
+                    <p>The working environment at our cafe is vibrant, dynamic, and supportive, fostering teamwork and positivity.</p>
+                </div>
+                <div class="question">
+                    <button>
+                        <span>How is the company's treatment ?</span>
+                        <img src="image/downarrow.png" class="faqImg">
+                    </button>
+                    <p>Our company treats team members with respect, offers fair compensation, opportunities for growth, open communication, and maintains a supportive culture.</p>
+                </div>
+                <div class="question">
+                    <button>
+                        <span>How is the working shift arrangement ?</span>
+                        <img src="image/downarrow.png" class="faqImg">
+                    </button>
+                    <p>Working shift arrangements at our cafe are flexible, utilizing rotating shifts, providing advance notice, facilitating shift swapping, and offering part-time and full-time options.</p>
+                </div>
+                <div class="question">
+                    <button>
+                        <span>Message from hiring person in charge</span>
+                        <img src="image/downarrow.png" class="faqImg">
+                    </button>
+                    <p>Thank you for your interest. We're reviewing applications carefully and will be in touch soon regarding the status of your application.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Form -->
+        <h5 class="JobSec">Application Form</h5>
+        <div class="jobBack">
+            <form id="jobform" method="post">
+                <div id="Btn">
+                    <input type="submit" value="Start Your Journal Now"/>
+                </div>
+                <div id="show">
+                    <div>
+                        <label for="Name">Name*</label><br/>
+                        <input name="name" id="Name" type="text" required placeholder="First and Last Name"/><br/>
+                        <label for="phone">Phone *</label><br/>
+                        <input name="phoneNum" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d(4)$" ><br/>
+                    </div>
+                </div>
+                <img src="image/checkerRedWheat2.png" class="jobimg">
+                <div id="show">
+                    <label for="age">Age</label><br/>
+                    <input name="JobAge" id="age" type="number" min="18" max="40" value="18"/><br/>   
+                </div>
+                <div id="show">
+                    <label for="email">Email *</label><br/>
+                    <input name="email" id="email" type="email" required  />
+                </div>
+                <img src="image/imgForm.png" class="lady">
+                <div class="exp">
+                    <label for="experience">Working Experiences*</label>
+                    <select id="experience" name="JobExp">
+                        <option value="Non">Non-experience</option>
+                        <option value="Relate">Cafe/Restaurent</option>
+                        <option value="NoRelate">Other Field</option>
+                        <option value="PartTimer">Part Timer</option>
+                        <option value="Barista">Barista</option>
+                        <option value="Crew">Kitchen Crew</option>
+                    </select><br/><br/>
+                </div>
+                <div>
+                    <label for="positionApp">Position Apply*</label><br/>
+                    <input type="checkbox" id="parttime" name="PartTimer"/>
+                    <label for="parttime">Part Timer</label>
+                    <input type="checkbox" id="barista" name="Barista"/>
+                    <label for="barista">Barista</label>
+                    <input type="checkbox" id="crew" name="KitCrew"/>
+                    <label for="crew">Kitchen Crew</label>
+                </div>
+            </form>
+            <div class="aniText">
+                <h2>We Hope to See You Soon</h2>
+            </div>
+        </div>
+        
+        <!----Footer (same on all pages)----------------------------------------------------->
+        <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                        <li><a href="job.html">Job Vacancy</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termscondition.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="cake.html">Cake</a></li>
+                        <li><a href="drinks.html">Drink</a></li>
+                        <li><a href="pastries.html">Pastries</a></li>
+                        <li><a href="pasta.html">Pasta</a></li>
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
+                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
+                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!----------------------------------------------------------------------------------->
+        <script src="job.js"></script>
+        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
+        <script src="general.js"></script>  <!--apply to all pages (header)-->
+    </body>
+</html>

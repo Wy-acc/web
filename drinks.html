@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drinks Menus Energy Cafe</title>
+        <link href="image/Logo.png" rel="shortcut icon"/>
+        <link href="general.css" rel="stylesheet"/>
+        <link href="product.css" rel="stylesheet"/>
+    </head>
+    <body data-category="drinks">
+        <!----Header (same on all pages)----------------------------------------------------->
+        <header>
+            <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Services</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="icon-cart" onclick="audio.play();">
+                <img src="image/cart_icon.png" alt="shopping cart"/>
+                <span>0</span>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------->
+        <!----Moving poster intro (same on all item pages)----------------------------------->
+        <div class="moving-picture">
+            <h1>Order Now</h1>
+            <div class="moving-picture-container" style="--t:20s">
+                <div>
+                    <span><img src="image/movpic1.png"/></span>
+                    <span><img src="image/movpic2.png"/></span>
+                    <span><img src="image/movpic3.jpg"/></span>
+                    <span><img src="image/movpic4.png"/></span>
+                </div>
+                <div>
+                    <span><img src="image/movpic1.png"/></span>
+                    <span><img src="image/movpic2.png"/></span>
+                    <span><img src="image/movpic3.jpg"/></span>
+                    <span><img src="image/movpic4.png"/></span>
+                </div>
+            </div>
+            <div class="moving-picture-container" style="--t:40s">
+                <div>
+                    <span><img src="image/movpic5.png"/></span>
+                    <span><img src="image/movpic6.jpg"/></span>
+                    <span><img src="image/movpic7.png"/></span>
+                    <span><img src="image/movpic8.png"/></span>
+                </div>
+                <div>
+                    <span><img src="image/movpic5.png"/></span>
+                    <span><img src="image/movpic6.jpg"/></span>
+                    <span><img src="image/movpic7.png"/></span>
+                    <span><img src="image/movpic8.png"/></span>
+                </div>
+            </div>
+            <div class="moving-picture-container" style="--t:10s">
+                <div>
+                    <span><img src="image/movpic9.png"/></span>
+                    <span><img src="image/movpic10.png"/></span>
+                    <span><img src="image/movpic11.png"/></span>
+                    <span><img src="image/movpic12.jpg"/></span>
+                </div>
+                <div>
+                    <span><img src="image/movpic9.png"/></span>
+                    <span><img src="image/movpic10.png"/></span>
+                    <span><img src="image/movpic11.png"/></span>
+                    <span><img src="image/movpic12.jpg"/></span>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------------------------------->
+
+        <div class="container">
+            <!--Category and Filter By aside-->
+            <aside>
+                <div class="category">
+                    <h2>Categories</h2>
+                    <ul>
+                        <li><a href="cake.html">Cake</a></li>
+                        <li><a href="drinks.html">Drinks</a></li>
+                        <li><a href="pastries.html">Pastries</a></li>
+                        <li><a href="pasta.html">Pasta</a></li>
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                    </ul>
+                </div>
+                <div class="filter">
+                    <h2>Filter By</h2>
+                    <ul>
+                        <li><a href="#latte">Latte</a></li>
+                        <li><a href="#espresso">Espresso</a></li>
+                        <li><a href="#frappuccino">Frappuccino</a></li>
+                        <li><a href="#iced-coffee">Iced Coffee</a></li>
+                        <li><a href="#chocolate">Chocolate</a></li>
+                        <li><a href="#matcha">Matcha</a></li>
+                        <li><a href="#soda">Soda</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!--List of food items of drinks category-->
+            <div class="listProduct">
+                <div class="item">
+                    <div class="item-image">
+                        <img src="item/drinks1.png" alt="">
+                        <button class="addCart">
+                            Add To Cart
+                        </button>
+                    </div>
+                    <h2>Name Product</h2>
+                    <div class="price">RM 200</div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Shopping Cart Tab-->
+        <div class="cartTab">
+            <div class="cartTab-header">
+                <h1>Shopping Cart</h1>
+                <button class="close">X</button>
+            </div>
+            <div id="divider"></div>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="item/drinks1.png" alt="">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="totalPrice">
+                        RM 200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <button class="checkOut" onclick="window.location.href = 'payment.html'">Check Out</button>
+        </div>
+
+        <!----Footer (same on all pages)----------------------------------------------------->
+        <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                        <li><a href="job.html">Job Vacancy</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termscondition.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="cake.html">Cake</a></li>
+                        <li><a href="drinks.html">Drink</a></li>
+                        <li><a href="pastries.html">Pastries</a></li>
+                        <li><a href="pasta.html">Pasta</a></li>
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
+                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
+                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!----------------------------------------------------------------------------------->
+        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
+        <script src="general.js"></script>  <!--apply to all pages (header)-->
+    </body>
+</html>

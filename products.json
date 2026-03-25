@@ -1,0 +1,550 @@
+[
+    {
+        "id": 1,     
+        "category": "cake",
+        "name": "Matcha Cream Cake",
+        "price": 11.90,
+        "image": "item/cake1.png",
+        "type": "all"
+    },
+    {
+        "id": 2,
+        "category": "cake",
+        "name": "Passionfruit Cake",
+        "price": 12.90,
+        "image": "item/cake4.png",
+        "type": "all"
+    },{
+        "id": 3,
+        "category": "cake",
+        "name": "Blueberry Cake",
+        "price": 11.90,
+        "image": "item/cake9.png",
+        "type": "all"
+    },{
+        "id": 4,
+        "category": "cake",
+        "name": "Cheese Cake",
+        "price": 9.90,
+        "image": "item/cake8.png",
+        "type": "all"
+    },{
+        "id": 5,
+        "category": "cake",
+        "name": "Rainbow Cake",
+        "price": 10.90,
+        "image": "item/cake12.png",
+        "type": "all"
+    },{
+        "id": 6,
+        "category": "cake",
+        "name": "Vegan Pistachio",
+        "price": 13.90,
+        "image": "item/cake5.png",
+        "type": "vegan"
+    },{
+        "id": 7,
+        "category": "cake",
+        "name": "Vegan Orange Curd",
+        "price": 13.90,
+        "image": "item/cake6.png",
+        "type": "vegan"
+    },{
+        "id": 8,
+        "category": "cake",
+        "name": "Fererro Rocher",
+        "price": 14.90,
+        "image": "item/cake10.png",
+        "type": "chocolate"
+    },{
+        "id": 9,
+        "category": "cake",
+        "name": "Oreo Choc Cake",
+        "price": 13.90,
+        "image": "item/cake11.png",
+        "type": "chocolate"
+    },{
+        "id": 10,
+        "category": "cake",
+        "name": "Mini Red Velvet",
+        "price": 7.90,
+        "image": "item/cake2.png",
+        "type": "mini"
+    },{
+        "id": 11,
+        "category": "cake",
+        "name": "Mini Bear Cake",
+        "price": 9.90,
+        "image": "item/cake3.png",
+        "type": "mini"
+    },{
+        "id": 12,
+        "category": "cake",
+        "name": "Mini Carrot Cake",
+        "price": 8.90,
+        "image": "item/cake7.png",
+        "type": "mini"
+    },{
+        "id": 13,
+        "category": "pastries",
+        "name": "Croissant",
+        "price": 7.90,
+        "image": "item/pastries1.png",
+        "type": "croissant"
+    },{
+        "id": 14,
+        "category": "pastries",
+        "name": "Roll Chocolate Croissant",
+        "price": 9.90,
+        "image": "item/pastries2.png",
+        "type": "croissant"
+    },{
+        "id": 15,
+        "category": "pastries",
+        "name": "White Pistachio Croissant",
+        "price": 10.90,
+        "image": "item/pastries3.png",
+        "type": "croissant"
+    },{
+        "id": 16,
+        "category": "pastries",
+        "name": "Macarons Set",
+        "price": 22.90,
+        "image": "item/pastries4.png",
+        "type": "all"
+    },{
+        "id": 17,
+        "category": "pastries",
+        "name": "Cinnamon Rolls",
+        "price": 9.90,
+        "image": "item/pastries5.png",
+        "type": "all"
+    },{
+        "id": 18,
+        "category": "pastries",
+        "name": "Fruit Cream Puff",
+        "price": 9.90,
+        "image": "item/pastries6.png",
+        "type": "all"
+    },{
+        "id": 19,
+        "category": "pastries",
+        "name": "Teriyaki Chicken",
+        "price": 13.90,
+        "image": "item/pastries7.png",
+        "type": "all"
+    },{
+        "id": 20,
+        "category": "pastries",
+        "name": "Chestnut Pumpkin",
+        "price": 12.90,
+        "image": "item/pastries8.png",
+        "type": "all"
+    },{
+        "id": 21,
+        "category": "pastries",
+        "name": "Cream Cheese French Toast",
+        "price": 11.90,
+        "image": "item/pastries9.png",
+        "type": "all"
+    },{
+        "id": 22,
+        "category": "pastries",
+        "name": "Maple Donut",
+        "price": 10.90,
+        "image": "item/pastries10.png",
+        "type": "donut"
+    },{
+        "id": 23,
+        "category": "pastries",
+        "name": "Boston Kreme",
+        "price": 11.90,
+        "image": "item/pastries11.png",
+        "type": "donut"
+    },{
+        "id": 24,
+        "category": "pastries",
+        "name": "Cinnamon Donut",
+        "price": 10.90,
+        "image": "item/pastries12.png",
+        "type": "donut"
+    },{
+        "id": 25,
+        "category": "pastries",
+        "name": "Peanut Butter Jelly",
+        "price": 12.90,
+        "image": "item/pastries13.png",
+        "type": "donut"
+    },{
+        "id": 26,
+        "category": "pastries",
+        "name": "Cheese Donut",
+        "price": 10.90,
+        "image": "item/pastries14.png",
+        "type": "donut"
+    },{
+        "id": 27,
+        "category": "pastries",
+        "name": "Sour Cream Waffle",
+        "price": 12.90,
+        "image": "item/pastries15.png",
+        "type": "waffle"
+    },{
+        "id": 28,
+        "category": "pastries",
+        "name": "Plain Waffle",
+        "price": 7.90,
+        "image": "item/pastries16.png",
+        "type": "waffle"
+    },{
+        "id": 29,
+        "category": "pastries",
+        "name": "Ice Cream Waffle",
+        "price": 12.90,
+        "image": "item/pastries17.png",
+        "type": "waffle"
+    },{
+        "id": 30,
+        "category": "pastries",
+        "name": "Bagel",
+        "price": 11.90,
+        "image": "item/pastries18.png",
+        "type": "all"
+    },{
+        "id": 31,
+        "category": "drinks",
+        "name": "Coconut Latte",
+        "price": 12.90,
+        "image": "item/drinks1.png",
+        "type": "latte"
+    },{
+        "id": 32,
+        "category": "drinks",
+        "name": "Hazelnut Latte",
+        "price": 11.10,
+        "image": "item/drinks2.png",
+        "type": "latte"
+    },{
+        "id": 33,
+        "category": "drinks",
+        "name": "Cheese Creme Latte",
+        "price": 12.90,
+        "image": "item/drinks3.png",
+        "type": "latte"
+    },{
+        "id": 34,
+        "category": "drinks",
+        "name": "Latte Osmanthus",
+        "price": 9.90,
+        "image": "item/drinks4.png",
+        "type": "latte"
+    },{
+        "id": 35,
+        "category": "drinks",
+        "name": "Cinnamon Apple Latte",
+        "price": 13.90,
+        "image": "item/drinks5.png",
+        "type": "latte"
+    },{
+        "id": 36,
+        "category": "drinks",
+        "name": "Oatmilk Espresso",
+        "price": 12.90,
+        "image": "item/drinks6.png",
+        "type": "espresso"
+    },{
+        "id": 37,
+        "category": "drinks",
+        "name": "Lotus Affogato Espresso",
+        "price": 13.90,
+        "image": "item/drinks7.png",
+        "type": "espresso"
+    },{
+        "id": 38,
+        "category": "drinks",
+        "name": "Espresso Roast",
+        "price": 8.90,
+        "image": "item/drinks8.png",
+        "type": "espresso"
+    },{
+        "id": 39,
+        "category": "drinks",
+        "name": "Salted Caramel Frappuccino",
+        "price": 14.90,
+        "image": "item/drinks9.png",
+        "type": "frappuccino"
+    },{
+        "id": 40,
+        "category": "drinks",
+        "name": "Chocolate Frappuccino",
+        "price": 12.90,
+        "image": "item/drinks10.png",
+        "type": "frappuccino"
+    },{
+        "id": 41,
+        "category": "drinks",
+        "name": "Pistachio Frappuccino",
+        "price": 13.90,
+        "image": "item/drinks11.png",
+        "type": "frappuccino"
+    },{
+        "id": 42,
+        "category": "drinks",
+        "name": "Orange Coffee",
+        "price": 10.90,
+        "image": "item/drinks12.png",
+        "type": "iced-coffee"
+    },{
+        "id": 43,
+        "category": "drinks",
+        "name": "Iced Americano",
+        "price": 7.90,
+        "image": "item/drinks13.png",
+        "type": "iced-coffee"
+    },{
+        "id": 44,
+        "category": "drinks",
+        "name": "Nitro Cold Brew",
+        "price": 11.90,
+        "image": "item/drinks14.png",
+        "type": "iced-coffee"
+    },{
+        "id": 45,
+        "category": "drinks",
+        "name": "Roasted Hazelnut Chocolate",
+        "price": 11.90,
+        "image": "item/drinks15.png",
+        "type": "chocolate"
+    },{
+        "id": 46,
+        "category": "drinks",
+        "name": "French Vanilla Chocolate",
+        "price": 13.90,
+        "image": "item/drinks16.png",
+        "type": "chocolate"
+    },{
+        "id": 47,
+        "category": "drinks",
+        "name": "Salted Caramel Chocolate",
+        "price": 13.90,
+        "image": "item/drinks17.png",
+        "type": "chocolate"
+    },{
+        "id": 48,
+        "category": "drinks",
+        "name": "Australian Chocolate",
+        "price": 11.90,
+        "image": "item/drinks18.png",
+        "type": "chocolate"
+    },{
+        "id": 49,
+        "category": "drinks",
+        "name": "Iced Matcha Latte",
+        "price": 12.90,
+        "image": "item/drinks19.png",
+        "type": "matcha"
+    },{
+        "id": 50,
+        "category": "drinks",
+        "name": "Matcha Frappuccino",
+        "price": 13.90,
+        "image": "item/drinks20.png",
+        "type": "matcha"
+    },{
+        "id": 51,
+        "category": "drinks",
+        "name": "Citrus Berry Soda",
+        "price": 10.90,
+        "image": "item/drinks21.png",
+        "type": "soda"
+    },{
+        "id": 52,
+        "category": "drinks",
+        "name": "Lemon Mint Soda",
+        "price": 9.90,
+        "image": "item/drinks22.png",
+        "type": "soda"
+    },{
+        "id": 53,
+        "category": "drinks",
+        "name": "Strawberry Soda",
+        "price": 10.90,
+        "image": "item/drinks23.png",
+        "type": "soda"
+    },{
+        "id": 54,
+        "category": "drinks",
+        "name": "Ice Cream Cola",
+        "price": 11.90,
+        "image": "item/drinks24.png",
+        "type": "soda"
+    },{
+        "id": 55,
+        "category": "breakfast",
+        "name": "Full English Breakfast",
+        "price": 17.90,
+        "image": "item/breakfast10.png",
+        "type": "all"
+    },{
+        "id": 56,
+        "category": "breakfast",
+        "name": "Breakfast Toast",
+        "price": 17.90,
+        "image": "item/breakfast11.png",
+        "type": "all"
+    },{
+        "id": 57,
+        "category": "breakfast",
+        "name": "Breakfast Platter",
+        "price": 17.90,
+        "image": "item/breakfast12.png",
+        "type": "all"
+    },{
+        "id": 58,
+        "category": "breakfast",
+        "name": "Blueberry Pancake",
+        "price": 10.00,
+        "image": "item/breakfast1.png",
+        "type": "pancake"
+    },{
+        "id": 59,
+        "category": "breakfast",
+        "name": "Mini Pancake and Tarts",
+        "price": 15.00,
+        "image": "item/breakfast2.png",
+        "type": "pancake"
+    },{
+        "id": 60,
+        "category": "breakfast",
+        "name": "Strawberry Pancake",
+        "price": 13.00,
+        "image": "item/breakfast3.png",
+        "type": "pancake"
+    },{
+        "id": 61,
+        "category": "breakfast",
+        "name": "Coconut Yoghurt Toast",
+        "price": 9.90,
+        "image": "item/breakfast4.png",
+        "type": "toast"
+    },{
+        "id": 62,
+        "category": "breakfast",
+        "name": "Custard Toast",
+        "price": 9.90,
+        "image": "item/breakfast5.png",
+        "type": "toast"
+    },{
+        "id": 63,
+        "category": "breakfast",
+        "name": "Mixed Jam Toast",
+        "price": 7.90,
+        "image": "item/breakfast6.png",
+        "type": "toast"
+    },{
+        "id": 64,
+        "category": "breakfast",
+        "name": "Baked Potato",
+        "price": 11.90,
+        "image": "item/breakfast7.png",
+        "type": "potato"
+    },{
+        "id": 65,
+        "category": "breakfast",
+        "name": "Creamy Mashed Potato",
+        "price": 15.90,
+        "image": "item/breakfast8.png",
+        "type": "potato"
+    },{
+        "id": 66,
+        "category": "breakfast",
+        "name": "Potato Wedges",
+        "price": 11.90,
+        "image": "item/breakfast9.png",
+        "type": "potato"
+    },{
+        "id": 67,
+        "category": "pasta",
+        "name": "Penne alla Arrabbiata",
+        "price": 18.00,
+        "image": "item/pasta1.png",
+        "type": "tomato"
+    },{
+        "id": 68,
+        "category": "pasta",
+        "name": "Bucatini all'Amatriciana",
+        "price": 22.00,
+        "image": "item/pasta2.png",
+        "type": "tomato"
+    },{
+        "id": 69,
+        "category": "pasta",
+        "name": "Lasagna al Forno",
+        "price": 25.00,
+        "image": "item/pasta3.png",
+        "type": "tomato"
+    },{
+        "id": 70,
+        "category": "pasta",
+        "name": "Fettuccine Alfredo",
+        "price": 20.00,
+        "image": "item/pasta4.png",
+        "type": "cream"
+    },{
+        "id": 71,
+        "category": "pasta",
+        "name": "Spaghetti Carbonara",
+        "price": 22.00,
+        "image": "item/pasta5.png",
+        "type": "cream"
+    },{
+        "id": 72,
+        "category": "pasta",
+        "name": "Gnocchi Gorgonzola",
+        "price": 24.00,
+        "image": "item/pasta6.png",
+        "type": "cream"
+    },{
+        "id": 73,
+        "category": "pasta",
+        "name": "Spaghetti Aglio e Olio",
+        "price": 15.00,
+        "image": "item/pasta7.png",
+        "type": "oil"
+    },{
+        "id": 74,
+        "category": "pasta",
+        "name": "Angel Hair with Lemon & Garlic",
+        "price": 18.00,
+        "image": "item/pasta8.png",
+        "type": "oil"
+    },{
+        "id": 75,
+        "category": "pasta",
+        "name": "Pasta Puttanesca",
+        "price": 20.00,
+        "image": "item/pasta9.png",
+        "type": "oil"
+    },{
+        "id": 76,
+        "category": "pasta",
+        "name": "Pasta Primavera",
+        "price": 20.00,
+        "image": "item/pasta10.png",
+        "type": "vege"
+    },{
+        "id": 77,
+        "category": "pasta",
+        "name": "Zucchini Ribbon Pasta",
+        "price": 18.00,
+        "image": "item/pasta11.png",
+        "type": "vege"
+    },{
+        "id": 78,
+        "category": "pasta",
+        "name": "Tagliatelle with Pumpkin Sauce",
+        "price": 22.00,
+        "image": "item/pasta12.png",
+        "type": "vege"
+    }
+]

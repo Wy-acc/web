@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="Retro, Energy, Cafe, Cozy, Vintage, Coffee"/>
+        <title>Energy Cafe Homepage</title>
+        <link href="general.css" rel="stylesheet"/>
+        <link href="index.css" rel="stylesheet" />
+        <link href="image/Logo.png" rel="shortcut icon" />
+    </head>
+    <body>
+        <!----Header (same on all pages)----------------------------------------------------->
+        <header>
+            <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Services</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="icon-cart" onclick="audio.play();">
+                <img src="image/cart_icon.png" alt="shopping cart"/>
+                <span>0</span>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------->
+        <!---Shopping cart module (same on all pages)---------------------------------------->
+        <div class="listProduct"></div>
+        <div class="cartTab">
+            <div class="cartTab-header">
+                <h1>Shopping Cart</h1>
+                <button class="close">X</button>
+            </div>
+            <div id="divider"></div>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="item/cake1.png" alt="">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="totalPrice">
+                        RM 200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <button class="checkOut" onclick="window.location.href = 'payment.html'">Check Out</button>
+        </div>
+        <!---------------------------------------------------------------------------------->
+        <!--Intro of Energy Cafe title-->
+        <section class="home">
+            <img src="image/Layer5.png" class="Layer5">
+            <img src="image/layer4.png" class="layer4">
+            <img src="image/Layer3.png" class="Layer3">
+            <h1 section class="title">Energy Cafe</h1>
+            <h4 section class="title2">ENERGY = MORE COFFEE</h4> 
+            <img src="image/layer2.png" class="layer2">
+            <img src="image/house1.png" class="house1">
+        </section>
+
+        <!--Section 1 (About Us & coffee cup)-->
+        <div class="section1">
+            <div class="coffee">
+                <img id="sectionL1" src="image/sectionL1.png" onclick="changeImage()">
+            </div>
+            <h2>About Us</h2>
+            <p>
+                <span>Welcome to Energy Cafe!</span> <br><br><span>Founded by Lucas Tan in 2024, our journey began with a love for great coffee and a dream of community. </span><br>
+                <br><span>From our humble beginnings to becoming a beloved hub of energy and connection, we're committed to crafting exceptional experiences for every guest who walks through our doors. 
+                </span><br><br><span>Join us as we continue to write the story of Energy Cafe together</span>.
+            </p>
+            <button onclick="window.location.href = 'aboutus.html'">Learn More !</button>
+        </div>
+
+        <!--Scroll text-->
+        <div class="section">
+            <div class="scroll text1">
+                <div>
+                    Energy <span>Cafe -</span>Energy <span>Cafe -</span>Energy <span>Cafe -</span>Energy <span>Cafe -</span>
+                </div>
+                <div>
+                    Energy <span>Cafe -</span>Energy <span>Cafe -</span>Energy <span>Cafe -</span>Energy <span>Cafe -</span>
+                </div>
+            </div>
+        </div>  
+
+        <div class="section2">
+            <!--Image Map (to each food category)-->
+            <img src="image/imgmap.jpg" alt="image map" usemap="#foodmap" width="100%" />
+            <map name="foodmap" id="foodmap">
+                <area shape="circle" title="breakfast" target="_self" coords="282,480,198" href="breakfast.html" alt="breakfast"/>
+                <area shape="poly" title="cake" alt="cake" target="_self" href="cake.html" coords="735,186,755,189,774,272,801,281,797,305,778,323,705,336,631,303,630,268,636,261,711,187" />
+                <area shape="poly" title="cake" alt="cake" target="_self" href="cake.html" coords="838,305,854,280,905,264,912,229,935,176,965,181,974,203,986,250,1021,261,1021,370,951,361,845,321" />
+                <area shape="circle" title="pastries" target="_self" coords="360,212,101" href="pastries.html" alt="Pastries"/>
+                <area shape="circle" title="coffee" target="_self" coords="425,71,68" href="drinks.html" alt="Coffee"/>
+                <area shape="circle" title="coffee" target="_self" coords="571,145,66" href="drinks.html" alt="Coffee"/>
+                <area shape="poly" title="Pasta" target="_self" coords="630,520,683,540,867,525,942,491,981,441,981,396,922,349,831,325,756,326,634,349" href="Pasta.html" alt="Pasta"/>
+            </map>  
+            <p class="mapMention">click on the food image to learn more!</p>
+
+            <!--Testimonials Section-->
+            <h4>Testimonials</h4>
+               <div class="decorate">
+                   <img src="image/decoration1.png"></src>
+               </div>  
+            <h5>" Bringing Joy One Cup at a Time. "</h5>
+            <h6>Read our raving review</h6>
+
+            <!-- Slideshow container (review) -->
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <q>This cafe is a hidden gem!<br> The ambiance is cozy, the coffee is superb, and the staff is incredibly friendly.<br> Definitely my new favorite spot to unwind after a long day.</q>
+                    <p class="author">- Zara Malik</p>
+                </div>
+                <div class="mySlides">
+                    <q>Absolutely love this place! <br>The menu offers a great variety of delicious snacks and drinks.</q>
+                    <p class="author">- Adam Wong</p>
+                </div>
+                <div class="mySlides">
+                    <q>Such a charming cafe! I adore the vintage decor and relaxed atmosphere here. <br>Whether I'm meeting friends for brunch or enjoying a quiet afternoon alone with a book, <br>this place always feels like a home away from home.</q>
+                    <p class="author">- Siti Abdullah</p>
+                </div>
+                    <div class="mySlides">
+                    <q>Hands down, one of the best cafes in town!</q>
+                    <p class="author">- Lilian Yap</p>
+                </div>
+                <!-- Next/prev buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <!--To reservation, events, job vaccancy pages-->
+        <div class="container_c">
+            <div class="card_container">
+                <article class="card_article">
+                    <img src="image/card_reservation.jpg" alt="reservation" class="card_img">
+                    <div class="card_data"> 
+                        <span class="card_description">Secure your spot</span>
+                        <h2 class="card_title">Reservation</h2>
+                        <a href="reservation.html" class="card_button">Read More</a>
+                    </div>
+                </article>
+                <article class="card_article">
+                    <img src="image/card_event.jpg" alt="events" class="card_img">
+                    <div class="card_data"> 
+                        <span class="card_description">Special occasions</span>
+                        <h2 class="card_title">News and Event</h2>
+                        <a href="event.html" class="card_button">Read More</a>
+                    </div>
+                </article>
+                <article class="card_article">
+                    <img src="image/card_job.jpg" alt="job" class="card_img">
+                    <div class="card_data"> 
+                        <span class="card_description">Available positions</span>
+                        <h2 class="card_title">Job Vacancy</h2>
+                        <a href="job.html" class="card_button">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!--Scroll text-->
+        <div class="section">
+            <div class="scroll2 text2">
+                <div>
+                    -Start your day <span>right </span>-Start your day <span>right </span>-Start your day <span>right </span> -Start your day <span>right </span>
+                </div>
+                <div>
+                    -Start your day <span>right </span>-Start your day <span>right </span>-Start your day <span>right </span> -Start your day <span>right </span>
+                </div>
+            </div>
+        </div>
+
+        <!--Home video-->
+        <video controls="controls" poster="image/indexVideoPoster.jpeg">
+            <source src="audiovideo/home_COFFEE_SHOP.mp4" type="video/mp4">
+            <track kind="captions" label="Video Captions" src="indexVideo_captions.vtt" default />
+            <p>Upgrade your browser to HTML5.</p>
+        </video>
+
+
+        <div class="section">
+            <!--Scroll text-->
+            <div class="scroll2 text2">
+                <div>
+                    -Start your day <span>right </span>-Start your day <span>right </span>-Start your day <span>right </span> -Start your day <span>right </span>
+                </div>
+                <div>
+                    -Start your day <span>right </span>-Start your day <span>right </span>-Start your day <span>right </span> -Start your day <span>right </span>
+                </div>
+            </div>
+        </div>
+
+        <!--Best seller-->
+        <div class="bestSeller">
+            <h1>Best Seller <span>Don't know what to Eat ?</span></h1>
+        </div>
+        <div class="BestSellerCtn">
+            <div class="slider">
+                <span style="--i:1;"><div class="pop"  data-name="c-1"><img src="item/breakfast3.png"></div></span>    
+                <span style="--i:2;"><div class="pop"  data-name="c-2"><img src="item/cake2.png" ></div></span>
+                <span style="--i:3;"><div class="pop"  data-name="c-3"><img src="item/cake6.png"></div></span>
+                <span style="--i:4;"><div class="pop"  data-name="c-4"><img src="item/drinks2.png" ></div></span>
+                <span style="--i:5;"><div class="pop"  data-name="c-5"><img src="item/drinks23.png"></div></span>
+                <span style="--i:6;"><div class="pop"  data-name="c-6"><img src="item/pasta1.png"></div></span>
+                <span style="--i:7;"><div class="pop"  data-name="c-7"><img src="item/pastries7.png" ></div></span>
+                <span style="--i:8;"><div class="pop"  data-name="c-8"><img src="item/pastries18.png"></div></span>
+            </div> 
+        </div>
+
+        <!--Pop out item-->
+        <div class="best-preview">
+            <div class="preview" data-target="c-1">
+                <img src="image/closePopOut.png" class="xmark">
+                <img src="item/breakfast3.png">
+                <h3>Strawberry Pancake</h3>
+                <div class="stars">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                </div>
+                <p>Fluffy, fruity, indulgent brunch.</p>
+                <div class="price">RM 13.00</div>
+                <a onclick="cartSound.play(); addToCart(60)" class="order">Order Now</a>
+            </div>
+            <div class="preview" data-target="c-2">
+                <img src="image/closePopOut.png" class="xmark">
+                <img src="item/cake2.png">
+                <h3>Mini Red Velvet</h3>
+                <div class="stars">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                </div>
+                <p>Decadent, bite-sized, velvety sweetness.</p>
+                <div class="price">RM 7.80</div>
+                <a onclick="cartSound.play(); addToCart(10)" class="order">Order Now</a>
+            </div>
+            <div class="preview" data-target="c-3">
+                <img src="image/closePopOut.png" class="xmark">
+                <img src="item/cake6.png">
+                <h3>Vegan Orange Curd</h3>
+                <div class="stars">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                </div>
+                <p>Zesty, creamy, plant-based delight.</p>
+                <div class="price">RM 13.90</div>
+                <a onclick="cartSound.play(); addToCart(7)" class="order">Order Now</a>
+            </div>
+            <div class="preview" data-target="c-4">
+                <img src="image/closePopOut.png" class="xmark">
+                <img src="item/drinks2.png">
+                <h3>Hazelnut Latte</h3>
+                <div class="stars">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                </div>
+                <p>Nutty, creamy, caffeinated bliss.</p>
+                <div class="price">RM 11.10</div>
+                <a onclick="cartSound.play(); addToCart(32)" class="order">Order Now</a>
+            </div>
+            <div class="preview" data-target="c-5">
+                <img src="image/closePopOut.png" class="xmark">
+                <img src="item/drinks23.png">
+                <h3>Strawberry Soda</h3>
+                <div class="stars">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                </div>
+                <p>Fizzy, refreshing, berry burst.</p>
+                <div class="price">RM 10.90</div>
+                <a onclick="cartSound.play(); addToCart(53)" class="order">Order Now</a>
+            </div>
+            <div class="preview" data-target="c-6">
+                <img src="image/closePopOut.png" class="xmark">
+                <img src="item/pasta1.png">
+                <h3>Penne Alla Arrabbiata</h3>
+                <div class="stars">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                </div>
+                <p>Spicy, flavorful, Italian comfort.</p>
+                <div class="price">RM 18.00</div>
+                <a onclick="cartSound.play(); addToCart(67)" class="order">Order Now</a>
+            </div>
+            <div class="preview" data-target="c-7">
+                <img src="image/closePopOut.png" class="xmark">
+                <img src="item/pastries7.png">
+                <h3>Teriyaki Chicken</h3>
+                <div class="stars">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                </div>
+                <p>Sticky, savory-sweet, Asian fusion.</p>
+                <div class="price">RM 13.90</div>
+                <a onclick="cartSound.play(); addToCart(19)" class="order">Order Now</a>
+            </div>
+            <div class="preview" data-target="c-8">
+                <img src="image/closePopOut.png" class="xmark">
+                <img src="item/pastries18.png">
+                <h3>Bagel</h3>
+                <div class="stars">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                    <img src="image/stars.png">
+                </div>
+                <p>Chewy, versatile, breakfast staple.</p>
+                <div class="price">RM 11.90</div>
+                <a onclick="cartSound.play(); addToCart(30)" class="order">Order Now</a>
+            </div>
+        </div>
+        <img src="image/sellerImg.png" class="hand">
+        <div class="bestSeller">
+            <p>Choose our Best Seller Item. Click it to learn more !</p>
+        </div>
+
+        <!----Footer (same on all pages)----------------------------------------------------->
+        <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                        <li><a href="job.html">Job Vacancy</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termscondition.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="cake.html">Cake</a></li>
+                        <li><a href="drinks.html">Drink</a></li>
+                        <li><a href="pastries.html">Pastries</a></li>
+                        <li><a href="pasta.html">Pasta</a></li>
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
+                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
+                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!----------------------------------------------------------------------------------->
+        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
+        <script src="general.js"></script>  <!--apply to all pages (header)-->
+        <script src="index.js"></script>
+    </body>
+</html>
