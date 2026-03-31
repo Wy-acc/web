@@ -1,282 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
+        <meta charset="utf-8">
         <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Payment Energy Cafe</title>
-        <link href="general.css" rel="stylesheet"/> 
-        <link href="payment.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menus Energy Cafe</title>
         <link href="image/Logo.png" rel="shortcut icon"/>
+        <link href="payment.css" rel="stylesheet"/>
+        
     </head>
-    <body>
-        <!----Header (same on all pages)----------------------------------------------------->
-        <header>
-            <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
-            <ul>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="reservation.html">Services</a></li>
-                <li><a href="event.html">Events</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-            </ul>
-            <div class="icon-cart" onclick="audio.play();">
-                <img src="image/cart_icon.png" alt="shopping cart"/>
-                <span>0</span>
-            </div>
-        </header>
-        <!----------------------------------------------------------------------------------->
-        <!---Shopping cart module (same on all pages)---------------------------------------->
-        <div class="listProduct"></div>
-        <div class="cartTab">
-            <div class="cartTab-header">
-                <h1>Shopping Cart</h1>
-                <button class="close">X</button>
-            </div>
-            <div id="divider"></div>
-            <div class="listCart">
-                <div class="item">
-                    <div class="image">
-                        <img src="item/cake1.png" alt="">
-                    </div>
-                    <div class="name">
-                        NAME
-                    </div>
-                    <div class="totalPrice">
-                        RM 200
-                    </div>
-                    <div class="quantity">
-                        <span class="minus">-</span>
-                        <span>1</span>
-                        <span class="plus">+</span>
-                    </div>
-                </div>
-            </div>
-            <button class="checkOut" onclick="window.location.href = 'payment.html'" >Check Out</button>
-        </div>
-        <!---------------------------------------------------------------------------------->
-        <!--title and intro-->
-        <div class="title">
-            <img src="image/paymentPic1.png" alt="Retro cash register" />
-            <h1>Payment</h1>
-        </div>
 
-        <!--Cart totals table-->
-        <table id="itemDetails">
-            <caption>Cart Totals</caption>
+    <body>
+        <h1>My list</h1>
+        <table id="cart-table">
             <thead>
                 <tr>
-                    <th colspan="2">Product</th>
+                    <th>ID</th>
+                    <th>Product</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Subtotal</th>
+                    <th>Total</th>
                 </tr>
             </thead>
-            <tbody class="listPayment">
-                <tr class="item">
-                    <td><img src="item/cake1.png"/></td>
-                    <td><span>Name Product</span></td>
-                    <td>RM 0.00</td>
-                    <td>0</td>
-                    <td>RM 0.00</td>
-                </tr>
+            <tbody id="cart-items">
+                <!-- Cart items will be dynamically added here -->
             </tbody>
             <tfoot>
                 <tr>
-                    <th colspan="4">Total</th>
-                    <td colspan="1" class="grandTotal">RM 0.00</td>
+                    <td colspan="4" style="text-align: right;">Total:</td>
+                    <td id="total-price">$0.00</td>
                 </tr>
             </tfoot>
         </table>
 
-        <img id="checker" src="image/checkerYellowRed.png" />
+        <button>Pay now</button>
+        <!--display form on screen after press pay now-->
+        <div class="container"> 
 
-        <!--Delivery / PickUp options-->
-        <div id="option">
-            <div class="fopt">
-                <input type="radio" id="delivery" name="deliveryType" value="delivery" checked>
-                <label for="delivery">Delivery</label>
-            </div>
-            <div class="sopt">
-                <input type="radio" id="pickup" name="deliveryType" value="pickup">
-                <label for="pickup">Pickup</label>
-            </div>
+            <form action="#"> 
+    
+                <div class="row"> 
+    
+                    <div class="col"> 
+                        <h3 class="title">Payment</h3> 
+    
+                        <div class="inputBox"> 
+                            <label>Name on Card: </label> 
+                            <input type="text" placeholder="Enter card name" required> 
+                        </div>
+                        
+                        <div class="inputBox"> 
+                            <label>Payment Method:</label> 
+                            <select> 
+                                <option>Choose payment method</option> 
+                                <option value="Visa">VISA</option> 
+                                <option value="MasterCard">MasterCard</option> 
+                                <option value="PayPal">PayPal</option> 
+                                
+                            </select> 
+                        </div> 
+    
+                        <div class="inputBox"> 
+                            <label for="cardNum"> Card Number: </label> 
+                            <input type="text" id="cardNum" placeholder="1111-2222-3333-4444" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" 
+                            maxlength="19" required> 
+                        </div> 
+    
+                        <div class="inputBox"> 
+                            <label>Expire Month:</label> 
+                            <select> 
+                                <option>Choose month</option> 
+                                <option value="January">January</option> 
+                                <option value="February">February</option> 
+                                <option value="March">March</option> 
+                                <option value="April">April</option> 
+                                <option value="May">May</option> 
+                                <option value="June">June</option> 
+                                <option value="July">July</option> 
+                                <option value="August">August</option> 
+                                <option value="September">September</option> 
+                                <option value="October">October</option> 
+                                <option value="November">November</option> 
+                                <option value="December">December</option> 
+                            </select> 
+                        </div> 
+    
+                        <div class="flex"> 
+                            <div class="inputBox"> 
+                                <label>Expire Year:</label> 
+                                <select> 
+                                    <option>Choose Year</option> 
+                                    <option value="2023">2023</option> 
+                                    <option value="2024">2024</option> 
+                                    <option value="2025">2025</option> 
+                                    <option value="2026">2026</option> 
+                                    <option value="2027">2027</option> 
+                                </select> 
+                            </div> 
+    
+                            <div class="inputBox"> 
+                                <label>CVV</label> 
+                                <input type="number" placeholder="1234" maxlength="999" required> 
+                            </div> 
+                        </div> 
+    
+                    </div> 
+    
+                </div> 
+    
+                <input type="submit" value="Checkout" class="submit_btn"> 
+            </form> 
+    
         </div>
 
-        <!--Billing details form-->
-        <h2 id="billform">Billing Details</h2>
-        <form id="billform" method="post">
-            <div class="billName">
-                <label for="fnBox">First Name *</label>
-                <input  type="text" name="firstName" id="fnBox" />
-                <label for="lnBox">Last Name *</label>
-                <input name="lastName" id="lnBox" type="text" />
-            </div>
-            <label>Country / Region *</label><br/>
-            <b>Kuala Lumpur</b><br/>
-            <div id="streetadd"> 
-                <label for="address">Street address *</label>
-                <input name="address" id="address" type="text" placeholder="House number and street name" /><br/>
-            </div>
-            <div id="areaopt">
-                <label for="area">Town / City *</label>
-                <select id="area" name="area" >
-                    <option value="Ampang">Ampang</option>
-                    <option value="Bangi">Bangi</option>
-                    <option value="Cheras">Cheras</option>
-                    <option value="Cyberjaya">Cyberjaya</option>
-                    <option value="Damansara">Damansara</option>
-                    <option value="Gombak">Gombak</option>
-                    <option value="Kajang">Kajang</option>
-                    <option value="Meru">Meru</option>
-                    <option value="PJ">Petaling Jaya</option>
-                    <option value="Puchong">Puchong</option>
-                    <option value="Semenyih">Semenyih</option>
-                    <option value="Serdang">Serdang</option>
-                    <option value="Setapak">Setapak</option>
-                    <option value="SJ">Subang Jaya</option>
-                </select><br/>
-            </div>
-            <div id="pickupTime"> 
-                <label for="pickupTime">Pickup Time:</label>
-                <input type="time" id="pickupTime" name="pickupTime" min="08:00" max="20:00" required />
-            </div>
-            <label for="phone" style="margin-right: 10px;">Phone</label>
-            <input name="phoneNumber" id="phone" type="tel" /><br/>
-            <label for="email">Email *</label>
-            <input name="email" id="email" type="email" />
-        </form>
-        <img id="checker" src="image/checkerYellowRed.png" />
-
-        <!--Order Summary (Your Order)-->
-        <h2 id="orderSummary">Your Order</h2>
-        <table id="orderSummary">
-            <tr>
-                <th>Subtotal</th>
-                <td class="ordsumSub">RM 0.00</td>
-            </tr>
-            <tr>
-                <th>Packaging Fee</th>
-                <td id= "Packaging">RM 1.20</td>    
-            </tr>
-            <tr>
-                <th>Delivery Fee</th>
-                <td id="DeliveryFee">RM 4.99</td>
-            </tr>
-            <tr>
-                <th>Total</th>
-                <td class="ordsumPay">RM 0.00</td>
-            </tr>
-        </table>
-        <button id="show-payment">Pay Now</button> 
-
-        <!--Pop Up Form upon clicking Pay Now button-->
-        <div class="popup">
-            <div class="close-btn">&times;</div>
-            <form class="payform" action="TQ.html" method="get">
-                <h2>Payment</h2>
-                <div class="form-element">
-                    <label for="Noc">Name on Card:</label>
-                    <input id="Noc" type="text" placeholder="Enter card name" />
-                </div>
-                <div class="form-element">
-                    <label for="method">Payment Method:</label>
-                    <select id="method"> 
-                        <option value="0">Choose payment method</option> 
-                        <option value="Visa">VISA</option> 
-                        <option value="MasterCard">MasterCard</option> 
-                        <option value="PayPal">PayPal</option> 
-                    </select>
-                </div>
-                <div class="form-element">
-                    <label for="cardNum">Card Number:</label>
-                    <input type="text" id="cardNum" placeholder="1111-2222-3333-4444" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" 
-                    maxlength="19" />
-                </div>
-                <div class="form-element">
-                    <label for="ExpireMon">Expire Month:</label>
-                    <select id="ExpireMon"> 
-                        <option value="0">Choose month</option> 
-                        <option value="January">January</option> 
-                        <option value="February">February</option> 
-                        <option value="March">March</option> 
-                        <option value="April">April</option> 
-                        <option value="May">May</option> 
-                        <option value="June">June</option> 
-                        <option value="July">July</option> 
-                        <option value="August">August</option> 
-                        <option value="September">September</option> 
-                        <option value="October">October</option> 
-                        <option value="November">November</option> 
-                        <option value="December">December</option> 
-                    </select>
-                </div>
-                <div class="flex">
-                    <div class="form-element">
-                        <label for="ExpireYear">Expire Year:</label> 
-                        <select id="ExpireYear" placeholder="Choose Year"> 
-                            <option value="2023">2023</option> 
-                            <option value="2024">2024</option> 
-                            <option value="2025">2025</option> 
-                            <option value="2026">2026</option> 
-                            <option value="2027">2027</option> 
-                        </select>
-                    </div>
-                    <div class="form-element">
-                        <label for="CVV">CVV</label> 
-                        <input type="number" id="CVV" placeholder="1234" min="0000" max="9999" required> 
-                    </div>
-                </div>
-                <div class="form-element">
-                    <input type="submit" value="Checkout" class="submit_btn">
-                </div>
-            </form>
-        </div>
-        <div class="scallop-up"></div>
-        <!----Footer (same on all pages)----------------------------------------------------->
-        <footer>
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h4>Get Help</h4>
-                    <ul>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="payment.html">Payment</a></li>
-                        <li><a href="job.html">Job Vacancy</a></li>
-                        <li><a href="reservation.html">Reservation</a></li>
-                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="event.html">Event</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="termscondition.html">Terms & Condition</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Menu</h4>
-                    <ul>
-                        <li><a href="cake.html">Cake</a></li>
-                        <li><a href="drinks.html">Drink</a></li>
-                        <li><a href="pastries.html">Pastries</a></li>
-                        <li><a href="pasta.html">Pasta</a></li>
-                        <li><a href="breakfast.html">Breakfast</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
-                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
-                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!----------------------------------------------------------------------------------->
-        <script src="payment.js"></script>
-        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
-        <script src="general.js"></script>  <!--apply to all pages (header)-->
+    <script src="shopcart.js"></script>
+    <script src="payment.js"></script>
     </body>
-</html>
+
+    </html>

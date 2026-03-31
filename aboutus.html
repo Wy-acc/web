@@ -1,171 +1,119 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About Energy Cafe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menus Energy Cafe</title>
         <link href="general.css" rel="stylesheet"/>
+        <link href="menu.css" rel="stylesheet"/>
         <link href="aboutus.css" rel="stylesheet"/>
         <link href="image/Logo.png" rel="shortcut icon"/>
+        
     </head>
+    
     <body>
-        <!----Header (same on all pages)----------------------------------------------------->
+      
         <header>
             <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
             <ul>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="reservation.html">Services</a></li>
-                <li><a href="event.html">Events</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
-            <div class="icon-cart" onclick="audio.play();">
+            <div class="icon-cart">
                 <img src="image/cart_icon.png" alt="shopping cart"/>
                 <span>0</span>
             </div>
         </header>
-        <!----------------------------------------------------------------------------------->
-        <!---Shopping cart module (same on all pages)---------------------------------------->
-        <div class="listProduct"></div>
-        <div class="cartTab">
-            <div class="cartTab-header">
-                <h1>Shopping Cart</h1>
-                <button class="close">X</button>
-            </div>
-            <div id="divider"></div>
-            <div class="listCart">
-                <div class="item">
-                    <div class="image">
-                        <img src="item/cake1.png" alt="">
-                    </div>
-                    <div class="name">
-                        NAME
-                    </div>
-                    <div class="totalPrice">
-                        RM 200
-                    </div>
-                    <div class="quantity">
-                        <span class="minus">-</span>
-                        <span>1</span>
-                        <span class="plus">+</span>
-                    </div>
-                </div>
-            </div>
-            <button class="checkOut" onclick="window.location.href = 'payment.html'">Check Out</button>
-        </div>
-        <!---------------------------------------------------------------------------------->
-        <!--title and intro-->
         <div class="aboutustitle">
-            <img id="pic" src="image/aboutuspic.png"/>
             <h1>About us</h1> 
+            <img id= "pic" src="image/aboutuspic.png"/>
         </div>
-
-        <div class="aboutussec">
-            <div class="scallop-up"></div>
-            <!--Section 1 Cafe history-->
-            <section class="section1">
-                <img id="pic1" src="image/aboutuspic1.png" alt="Thomas Dee's coffee"/>
-                <h2>Cafe History</h2>
-                <p>
-                    Energy Cafe isn't just a coffee shop — it's a journey back in time to the golden era of American vintage charm. Our story began in 1985, inspired by the bustling diners and vibrant energy of mid-century America. From the moment you walk through our doors, you'll be transported to a bygone era, where every sip of our rich, flavorful coffee ignites your spirit and fuels your day.
-                <br/><br/>
-                    Our founders, Thomas Dee, envisioned a place where people could escape the hustle and bustle of modern life and indulge in the simple pleasures of great coffee and good company.
-                </p>
-            </section>
-            <div class="scallop-down"></div>
-
-            <!--Section 2 Our mission-->
-            <section class="section2">
-                <img id="pic2"src="image/aboutuspic2.png" alt="cafe picture"/> 
-                <h2>Our Mission</h2>
-                <p>
-                    Our journey began with a simple mission: to redefine the way you enjoy your daily indulgences. Whether you're craving artisanal coffee blends, delectable pastries, or gourmet meals, our online website has got you covered. We've scoured the globe to source the finest ingredients and products, ensuring that every item in our collection is a testament to quality and taste.
-                </p>
-                <img id="pic4" src="image/checkerYellowBlue.png" />
-                <img id="pic5" src="image/aboutuspic4.png" />
-                <div class="sec2descriplist">
-                    <dt>Mission</dt>
-                    <dd>
-                        Energize your day with exceptional coffee. Create a welcoming haven inspired by American vintage charm. Foster connections and camaraderie through hospitality and warmth.
-                    </dd>
-                    <dt>Vision</dt>
-                    <dd>To be the go-to destination for coffee lovers and vintage enthusiasts.
-                        Provide a nostalgic escape where quality and community intertwine.
-                        Transport guests to a simpler time, filled with genuine connections and memorable experiences.
-                    </dd>
-                </div>
+            <div class="aboutussec">
+                <img id="pic1" src="image/aboutuspic1.png"/> 
                 <br>
-            </section>
-            <div class="scallop-up"></div>
-
-            <!--Section 3 Atmosphere and Coffee-->
-            <section class="section3">    
-                <img id="pic3" src="image/aboutuspic3.png" alt="retro cafe"/>  
-                <h2>The Atmosphere</h2>
-                <p>
-                    Step into Energy Cafe, and you'll feel like you've stepped back in time. Our cozy interior is adorned with retro furnishings, vintage posters, and classic memorabilia, creating an ambiance that's as inviting as it is nostalgic. Pull up a seat at our retro counter or sink into one of our plush booths — no matter where you sit, you'll be surrounded by the warmth and comfort of a bygone era. 
-                </p>
-                <img id="pic7" src="image/checkerOrangeBlue.png" />
-                <h2>The Coffee</h2>
-                <p>
-                    At Energy Cafe, we take our coffee seriously. Our expert baristas handcraft each cup with care, using only the finest beans sourced from around the world. From bold and robust to smooth and creamy, our carefully curated selection of coffee blends has something to satisfy every palate. And with our vintage-style espresso machines, you can trust that every shot is pulled to perfection, ensuring a consistently delicious brew every time.
-                </p>
-                <img id="pic6" src="image/aboutuspic5.png" alt="retro food" />
-            </section>
-            <div class="scallop-down"></div>
-
-            <!--Section 4 Ending section to menu-->
-            <section class="section4">
+                <p>Welcome to our <i>Energy Cafe online website</i>, where we bring the cozy American vintage atmosphere and delightful treats of a 
+                    traditional cafe experience directly to your doorstep! At our digital haven, we blend the convenience 
+                    of online shopping with the comfort of your favorite cafe, offering a curated selection of gourmet 
+                    products and delivering them straight to you.
+                <br>
+                <br>
+                    Our journey began with a simple mission: to redefine the way you enjoy your daily indulgences. 
+                    Whether you're craving artisanal coffee blends, delectable pastries, or gourmet meals, our online 
+                    website has got you covered. We've scoured the globe to source the finest ingredients and products, ensuring 
+                    that every item in our collection is a testament to quality and taste.</p>
+                <br>    
+                <img id="pic2"src="image/aboutuspic2.png" /> 
+                <p>But we're not just about offering exceptional products; we're also committed to providing an 
+                    unparalleled customer experience by the unique design of american vintage style.. From the moment you visit our 
+                    virtual storefront to the second your order arrives at your doorstep, we strive to make every step of the process 
+                    seamless and enjoyable.
+                <br>
+                <br>  
+                    At our online website, we understand that convenience is key. That's why we've streamlined our 
+                    ordering and delivery processes to ensure that you can satisfy your cravings with just a few clicks. 
+                    Whether you're stocking up on your favorite blends for the week ahead or surprising a loved one with
+                     a pastries, our user-friendly platform makes it easy to shop online and have your items 
+                     delivered to your preferred location.</p>
+                <br>  
+                <img id="pic3"src="image/aboutuspic3.png"/>  
+                <p>In addition to our wide range of products, we also offer comfortable website experience by these stores enhances 
+                    the shopping journey for customers, offering intuitive navigation and high-quality images. This user-friendly interface 
+                    facilitates seamless browsing and decision-making, fostering a sense of trust and satisfaction among shoppers as they explore 
+                    the diverse range of vintage-inspired offerings.
+                <br> 
+                <br>
+                    So whether you're in the mood for a cozy night in with a cup of freshly brewed coffee or looking to 
+                    treat yourself to a gourmet snack, we invite you to explore our online website and indulge in a world 
+                    of flavor and convenience.</p>
+                <br>
+                <br>
                 <h2>Retro indulgence, just a click away</h2>
-                <button onclick="window.location.href = 'menu.html'">Check It</button>
-            </section>
-        </div>
-        <div class="scallop-up"></div>
-
-        <!----Footer (same on all pages)----------------------------------------------------->
+            </div>
+    
         <footer>
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h4>Get Help</h4>
-                    <ul>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="payment.html">Payment</a></li>
-                        <li><a href="job.html">Job Vacancy</a></li>
-                        <li><a href="reservation.html">Reservation</a></li>
-                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="event.html">Event</a></li>
-                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                        <li><a href="termscondition.html">Terms & Condition</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Menu</h4>
-                    <ul>
-                        <li><a href="cake.html">Cake</a></li>
-                        <li><a href="drinks.html">Drink</a></li>
-                        <li><a href="pastries.html">Pastries</a></li>
-                        <li><a href="pasta.html">Pasta</a></li>
-                        <li><a href="breakfast.html">Breakfast</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
-                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
-                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
-                    </div>
+        <div class="footer-row">
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                    <li><a href="job.html">Job Vacancy</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="location.html">Location</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="termscondition.html">Terms & Condition</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="cake.html">Cake</a></li>
+                    <li><a href="drink.html">Drink</a></li>
+                    <li><a href="pastries.html">Pastries</a></li>
+                    <li><a href="pasta.html">Pasta</a></li>
+                    <li><a href="breakfast.html">Breakfast</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <img src="image/fb.png">
+                    <img src="image/ig.png">
+                    <img src="image/twitter.png">
                 </div>
             </div>
-        </footer>
-        <!----------------------------------------------------------------------------------->
-        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
-        <script src="general.js"></script>  <!--apply to all pages (header)-->
+        </div>
+    </footer>
     </body>
 </html>

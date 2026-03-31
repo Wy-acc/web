@@ -1,14 +1,11 @@
-//Slideshow 
 let productContainers = [...document.querySelectorAll('.slide-container')];
 let nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 let preBtn = [...document.querySelectorAll('.pre-btn')];
 
-//Sorts of selection section
 let text = document.getElementById('parallex-text');
 let parallex1 = document.getElementById('element2');
 let parallex2 = document.getElementById('element1');
 
-//Waves (5 sections x 4 waves)
 let waves = [];
 for (let i = 1; i <= 5; i++) {
     for (let j = 1; j <= 4; j++) {
@@ -16,7 +13,6 @@ for (let i = 1; i <= 5; i++) {
     }
 }
 
-//Cake, drinks, pastries, breakfast and pasta sections
 let cakeText1 = document.getElementById('cake-text');
 let cakeText2 = document.getElementById('cake-text2');
 let cakePic1 = document.getElementById('cakePic1');
@@ -60,7 +56,6 @@ productContainers.forEach((item, i) => {
     })
 })
 
-//Get the current display size (1024 x 768 or 1920 x 1080)
 function detectDisplaySize() {
     const windowWidth = window.screen.width;
     const windowHeight = window.screen.height;
@@ -74,18 +69,17 @@ function detectDisplaySize() {
     }
 }
 
-//When scrolling through the page, parallex effect applied
-window.addEventListener('scroll', () => {   
+window.addEventListener('scroll', () => {
     const displaySize = detectDisplaySize();
     let waveValue = window.scrollY;
-    let parallexValue = window.scrollY - 600;   //1920 x 1080
+    let parallexValue = window.scrollY - 600;
     let cakeValue = window.scrollY - 1200;
     let drinksValue = window.scrollY - 2000;
     let pastriesValue = window.scrollY - 3200;
     let breakfastValue = window.scrollY - 3900;
     let pastaValue = window.scrollY - 4550;
 
-    if(displaySize == '1024x768') {             //1024 x 768
+    if(displaySize == '1024x768') {
         parallexValue = window.scrollY - 450;
         cakeValue = window.scrollY - 1200;
         drinksValue = window.scrollY - 1900;
@@ -172,38 +166,3 @@ window.addEventListener('scroll', () => {
     pastaPic2.style.marginTop = pastaValue * 0.5 + 'px';
     pastaPic3.style.left = pastaValue * 0.5 + 'px';
 })
-
-//Speciality Promotion (toggle the content)
-function toggleSpeciality() {
-    let specialityDiv = document.querySelector(".speciality"); 
-    let whatDiv = document.querySelector(".what");
-    if (specialityDiv.style.display === "none") {
-        specialityDiv.style.display = "flex";   //display: flex --> none or
-        whatDiv.style.display = "none";         //         none --> flex
-    } else {
-        specialityDiv.style.display = "none";
-        whatDiv.style.display = "flex";
-    }
-}
-
-//Empty plate section (show each category image based on type of button mouse over)
-function showPlateImage(imageId) {
-    var targetImage = document.getElementById(imageId);
-    targetImage.style.opacity = "1";
-    targetImage.style.transition = "opacity 1s"
-}
-
-function hideImage(imageId) {
-    var targetImage = document.getElementById(imageId);
-    targetImage.style.opacity = "0"
-}
-
-//Menu Overview (toggle the menu on click image)
-function toggleMenu() {
-    let menuPop = document.querySelector(".menuPop");
-    if (menuPop.style.display === "none") {     //display: none --> block or
-        menuPop.style.display = "block";        //         block --> none
-    } else {
-        menuPop.style.display = "none";
-    }
-}

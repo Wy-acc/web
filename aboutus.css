@@ -1,77 +1,96 @@
-html {
-    background-color: #f4dcab;
+html{
+    background: linear-gradient(#f4dcab,#abc8c6);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
 }
 
-/*title and intro*/
+header{
+    padding:0px 105px;
+    background: #398583;
+    max-width: 1020px;
+}
+
+header ul li a{
+    color:black;
+}
+  
 .aboutustitle{
     margin: auto;
     justify-content: center;
     display: flex;
     overflow: hidden;
-    animation: fadeInUp 1s;
 }
+
 .aboutustitle img{
-    position: relative;
-    width: 100%;
-    height: 700px;
-    transform: scale(1.2);
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
-    filter: opacity(0.8);
+    height: 100vh;
+    object-fit: cover;
+    opacity: 80%;
 }
+
 .aboutustitle h1{
     position: absolute;
-    font-family: "Scripto", 'Times New Roman', Times, serif;
-    font-size: 6em;
-    color: #44aaac;
-    text-shadow: 4px 5px #7c3d2a;
-    padding: 70px 60px;
+    color:  #44aaac;
+    padding: 30px 60px 20px 60px;
     text-align: center;
-    top: 200px;
+    background-color: #F4DCAB;
+    font-size: 60px;
+    font-family: "Scripto", 'Times New Roman', Times, serif;
     border: double 5px #7c3d2a;
-    background-color: rgba(244,220,171,0.7);
-    animation: fadeInUp 1s;
+    text-decoration: underline;
+    margin-top: 20%;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
-/*Each section divisor*/
-section {
-    padding-bottom: 2em;
+@keyframes glow {
+    from {
+      text-shadow: 0 0 20px #7c3d2a;
+    }
+    to {
+      text-shadow: 0 0 30px #b0887c, 0 0 10px #cca69b;
+    }
 }
-.scallop-down{
-    height:100px;
-    width:100%;
-    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#44aaac), color-stop(0.49, #44aaac), color-stop(0.51, #e6dcc9), to(#e6dcc9));
-    background-size: 49px 100%;
+.aboutussec {
+    background: linear-gradient(#f4dcab,#47abab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    justify-content: center;
+    height: auto;
 }
-.scallop-up{
-  height:100px;
-  width:100%;
-  background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#44aaac), color-stop(0.49, #44aaac), color-stop(0.51, #e6dcc9), to(#e6dcc9));
-  background-size: 49px 100%;
-}
-
-/*Sections CSS*/
-.section1, .section3{
-    position: relative;
-    background:#44aaac;
-    color:#e6dcc9;
-    padding-bottom: 70px;
-}
-.section2{
-    background: #e6dcc9;
-    color: #44aaac;
-    position: relative;
-    height: 800px;
-}
-.section1 p, .section2 p, .section3 p{
-    line-height: 2em;
+           
+.aboutussec p {
     color: #7c3d2a;
-    margin: 0px 6%;
-    padding-bottom: 50px;
-    font-size: 1.0em;
-    font-weight: 500;
+    padding-top: 15px;
+    margin: 0px 80px;
+    font-size: 15px;
+    font-weight: 600;
     font-family: "Roboto Slab", sans-serif;
     text-align: justify;
+} 
+
+.aboutussec img{
+    width: 15%;
+    height: 15%;
+    display: block;
 }
+
+#pic1{
+    float: left;
+    margin: 30px 20px 5px 80px;
+}
+
+#pic2{
+    float: right;
+    margin: 10px 80px 1px 30px;
+}
+
+#pic3{
+    float: left;
+    margin: 15px 20px 20px 80px;
+}
+
 .aboutussec h2 {
     color: #7c3d2a;
     padding: 30px 60px 70px 60px;
@@ -79,145 +98,10 @@ section {
     font-family: "Scripto", Times, serif;
     text-shadow: 5px 10px #e0c55c;
     font-size: 3.5em;
-    background-color: #e6dcc9;
 }
 
-/*Section 1 Cafe History*/
-.section1 h2 {
-    padding: 40px 5%;
-    font-size: 3em;
-    background-color: transparent;
-    text-shadow: 5px 5px #e0c55c;
-}
-#pic1{
-    width: 35%;
-    height: 450px;
-    display: block;
-    float: left;
-    margin: 70px 5%;
+footer{
+    margin-top: 0%;
+    padding: 60px 100px;
 }
 
-/*Section 2 Mission*/
-.section2 h2 {
-    padding: 40px 5%;
-    background: transparent;
-    font-family: "Messenger Texture", sans-serif;
-    font-weight: 100;
-    color: #DC5137;
-    text-shadow: 5px 5px #273189;
-}
-#pic2{
-    width: 30%;
-    display: block;
-    float: right;
-    margin: 1em 4em 1em 3em;
-}
-#pic4 {
-    width: 50%;
-    height: 50px;
-    margin-left: 6%;
-}
-#pic5 {
-    width: 40%;
-    margin-top: 40px;
-    position: absolute;
-    left: 40px;
-    top: 400px;
-}
-.sec2descriplist {
-    width: 45%;
-    margin: 50px 5%;
-    position: absolute;
-    right: 0px;
-}
-.section2 dt {
-    font-family: "Scripto", serif;
-    font-size: 2em;
-    line-height: 1.5em;
-    color: #0b2860;
-    text-shadow: 3px 3px #fcba3c;
-}
-.section2 dd {
-    font-family: "Roboto Slab", sans-serif;
-    color: #0b2860;
-    text-align: justify;
-}
-.section3 h2 {
-    padding: 40px 5%;
-    background: transparent;
-    color: #e25b36;
-    text-shadow: 5px 5px #252744;
-}
-
-/*Section 3 Atmosphere and Coffee*/
-.section3 h2:nth-of-type(2) {
-    clear: both;
-    margin-top: 40px;
-    margin-right: 400px;
-}
-.section3 p:nth-of-type(2) {
-    width: 50%;
-}
-#pic3{
-    width: 30%;
-    height: 30%;
-    display: block;
-    float: left;
-    margin: 50px 6%;
-}
-#pic7 {
-    width: 60%;
-    height: 60px;
-    position: absolute;
-    right: 2%;
-}
-#pic6 {
-    width: 30%;
-    height: 400px;
-    position: absolute;
-    right: 5%;
-    bottom: 60px;
-}
-
-/*Section 4 Ending Section*/
-.section4 {
-    background-color: #e6dcc9;
-}
-.section4 button:hover {
-    cursor: pointer;
-    animation: jelly 0.5s;
-}
-@keyframes jelly{
-    0%,
-    100%{
-        transform:scale(1,1);
-    }
-    25% {
-        transform: scale(0.9,1.1);
-    }
-    50%{
-        transform: scale(1.1,0.9);
-    }
-    75%{
-        transform:scale(0.95,1.05);
-    }
-}
-.section4 button {
-    justify-content: center;
-    padding: 5px;
-    display: flex;
-    margin: 5px auto;
-    background-color: #44aaac;
-    color: #f4dcab;
-    font-family: "Kaushan Script", serif;
-    height: 60px;
-    width: 160px;
-    font-size: 1.7em;
-    font-weight: 600;
-    box-shadow: 6px 6px #273189;
-    border-radius: 12px;
-}
-
-footer {
-    margin-top: 0px;
-}
