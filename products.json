@@ -136,7 +136,7 @@
     },{
         "id": 20,
         "category": "pastries",
-        "name": "Chesnut Pumpkin",
+        "name": "Chestnut Pumpkin",
         "price": 12.90,
         "image": "item/pastries8.png",
         "type": "all"
@@ -381,24 +381,24 @@
     },{
         "id": 55,
         "category": "breakfast",
-        "name": "Sunny Side Up With Ham, Fries, Toast and Sausage",
+        "name": "Full English Breakfast",
         "price": 17.90,
         "image": "item/breakfast10.png",
-        "type": "breakfast"
+        "type": "all"
     },{
         "id": 56,
         "category": "breakfast",
-        "name": "Sunny Side Up With Toast and Sausage",
+        "name": "Breakfast Toast",
         "price": 17.90,
         "image": "item/breakfast11.png",
-        "type": "breakfast"
+        "type": "all"
     },{
         "id": 57,
         "category": "breakfast",
-        "name": "Sunny Side Up With Nuggets, Salad, Toast and Sausage",
+        "name": "Breakfast Platter",
         "price": 17.90,
         "image": "item/breakfast12.png",
-        "type": "breakfast"
+        "type": "all"
     },{
         "id": 58,
         "category": "breakfast",
@@ -409,7 +409,7 @@
     },{
         "id": 59,
         "category": "breakfast",
-        "name": "Mini Pancake and tarts",
+        "name": "Mini Pancake and Tarts",
         "price": 15.00,
         "image": "item/breakfast2.png",
         "type": "pancake"
@@ -423,7 +423,7 @@
     },{
         "id": 61,
         "category": "breakfast",
-        "name": "Coconut Yogurt Toast",
+        "name": "Coconut Yoghurt Toast",
         "price": 9.90,
         "image": "item/breakfast4.png",
         "type": "toast"
@@ -462,5 +462,89 @@
         "price": 11.90,
         "image": "item/breakfast9.png",
         "type": "potato"
+    },{
+        "id": 67,
+        "category": "pasta",
+        "name": "Penne alla Arrabbiata",
+        "price": 18.00,
+        "image": "item/pasta1.png",
+        "type": "tomato"
+    },{
+        "id": 68,
+        "category": "pasta",
+        "name": "Bucatini all'Amatriciana",
+        "price": 22.00,
+        "image": "item/pasta2.png",
+        "type": "tomato"
+    },{
+        "id": 69,
+        "category": "pasta",
+        "name": "Lasagna al Forno",
+        "price": 25.00,
+        "image": "item/pasta3.png",
+        "type": "tomato"
+    },{
+        "id": 70,
+        "category": "pasta",
+        "name": "Fettuccine Alfredo",
+        "price": 20.00,
+        "image": "item/pasta4.png",
+        "type": "cream"
+    },{
+        "id": 71,
+        "category": "pasta",
+        "name": "Spaghetti Carbonara",
+        "price": 22.00,
+        "image": "item/pasta5.png",
+        "type": "cream"
+    },{
+        "id": 72,
+        "category": "pasta",
+        "name": "Gnocchi Gorgonzola",
+        "price": 24.00,
+        "image": "item/pasta6.png",
+        "type": "cream"
+    },{
+        "id": 73,
+        "category": "pasta",
+        "name": "Spaghetti Aglio e Olio",
+        "price": 15.00,
+        "image": "item/pasta7.png",
+        "type": "oil"
+    },{
+        "id": 74,
+        "category": "pasta",
+        "name": "Angel Hair with Lemon & Garlic",
+        "price": 18.00,
+        "image": "item/pasta8.png",
+        "type": "oil"
+    },{
+        "id": 75,
+        "category": "pasta",
+        "name": "Pasta Puttanesca",
+        "price": 20.00,
+        "image": "item/pasta9.png",
+        "type": "oil"
+    },{
+        "id": 76,
+        "category": "pasta",
+        "name": "Pasta Primavera",
+        "price": 20.00,
+        "image": "item/pasta10.png",
+        "type": "vege"
+    },{
+        "id": 77,
+        "category": "pasta",
+        "name": "Zucchini Ribbon Pasta",
+        "price": 18.00,
+        "image": "item/pasta11.png",
+        "type": "vege"
+    },{
+        "id": 78,
+        "category": "pasta",
+        "name": "Tagliatelle with Pumpkin Sauce",
+        "price": 22.00,
+        "image": "item/pasta12.png",
+        "type": "vege"
     }
 ]

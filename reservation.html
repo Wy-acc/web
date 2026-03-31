@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reservation/Catering Energy Cafe</title>
+        <link href="general.css" rel="stylesheet"/>
+        <link href="reservation.css" rel="stylesheet"/>
+        <link href="image/Logo.png" rel="shortcut icon"/>
+    </head>
+    <body>
+        <!----Header (same on all pages)----------------------------------------------------->
+        <header>
+            <a class="logo" href="index.html"><img src="image/Logo.png" alt="Logo"></a>       
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Services</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <div class="icon-cart" onclick="audio.play();">
+                <img src="image/cart_icon.png" alt="shopping cart"/>
+                <span>0</span>
+            </div>
+        </header>
+        <!----------------------------------------------------------------------------------->
+        <!--title and intro -->
+        <div class="title">
+            <img src="image/reservationPic1.png" alt="Gathering and Buffet">
+            <h1>Reservation & Catering</h1>
+        </div>
+
+        <img id="checker" src="image/checkerYellowRed.png" />
+
+        <!---Shopping cart module (same on all pages)---------------------------------------->
+        <div class="listProduct"></div>
+        <div class="cartTab">
+            <div class="cartTab-header">
+                <h1>Shopping Cart</h1>
+                <button class="close">X</button>
+            </div>
+            <div id="divider"></div>
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="item/cake1.png" alt="">
+                    </div>
+                    <div class="name">
+                        NAME
+                    </div>
+                    <div class="totalPrice">
+                        RM 200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus">-</span>
+                        <span>1</span>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+            <button class="checkOut" onclick="window.location.href = 'payment.html'" >Check Out</button>
+        </div>
+        <!---------------------------------------------------------------------------------->
+
+        <!--Reserve a Table form-->
+        <div class="reserve" id="blur">
+            <form id="survey" action="TQ.html" method="get">
+                <h1>Reserve a Table</h1>
+                <p>We will try our best to accommodate all request whenever possible <br>but do check in with us on your special requirements,<br>as there are times when we are limited by operational activities.</p>
+                <div class="input-group">
+                    <input type="text" id="name" required/>
+                    <label for="name">Name</label>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" id="phone" required/>
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required/>
+                        <label for="email">Email</label>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <input type="date" id="date" required/>
+                        <label for="date">Date</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="time" id="time" required/>
+                        <label for="time">Time</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="pax" min="1" max="15" required/>
+                    <label for="pax">No. of pax</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="request" rows="3" required></textarea>
+                    <label for="request">Special request</label>
+                </div>  
+                <input type="submit" class="book" action="TQ.html" value="BOOK NOW"/>
+            </form>
+        </div>
+
+        <!--parallax wave effect-->
+        <section>
+            <div class="wave" id="wave1" style="--i:1;"></div>
+            <div class="wave" id="wave2" style="--i:2;"></div>
+            <div class="wave" id="wave3" style="--i:3;"></div>
+            <div class="wave" id="wave4" style="--i:4;"></div>
+        </section>
+
+        <!--Catering Services-->
+        <div class="sec">
+            <h2>Catering Services</h2>
+            <p>events, celebration, special occasions and etc.</p>
+            <img src="image/reservationPic2.jpg" alt="party">
+        </div>
+        <p class="desc">
+            Elevate your event with our diverse catering packages designed to satisfy every palate. Choose from our Classic Brunch Buffet, Gourmet Sandwich Platter, Exotic International Cuisine Feast, Farm-to-Table Harvest Dinner, or Sweet Treats Dessert Bar. From breakfast favorites to global flavors and farm-fresh ingredients, our packages promise to impress your guests and make your event unforgettable.
+        </p>
+
+        <!--Catering Packages-->
+        <section class="container">
+            <div class="grid">
+                <div class="card">
+                    <div class="img-box">
+                        <img src="image/catering1.jpg" alt="Package A">
+                    </div>
+                    <div class="card-content">
+                        <h1 class="card-heading">Package A</h1>
+                        <p class="card-text">pasta, choice of sauce, sides, breadstix, salad and dressings.<br> $ 32 /pax</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="image/catering2.jpg" alt="Package B">
+                    </div>
+                    <div class="card-content">
+                        <h1 class="card-heading">Package B</h1>
+                        <p class="card-text">lasagna, brownies, twists bread,<br>pastry and salad.<br> $ 36 /pax</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-box">
+                        <img src="image/catering3.jpg" alt="Package C">
+                    </div>
+                    <div class="card-content">
+                        <h1 class="card-heading">Package C</h1>
+                        <p class="card-text">3 types of sandwiches, 2 assorted cupcakes, french vanilla pudding<br>and macarons.<br> $ 42 /pax</p>
+                    </div>
+                </div>
+                <div class="popup-image">
+                    <span>&times;</span>
+                    <img src="image/catering1.jpg" alt="Package A"/>
+                </div>
+            </div>
+        </section>
+
+        <!--Animated Scroll Text-->
+        <div class="text">
+            <h1>Catering Packages Available! • Inquire now! •</h1>
+            <h1>Catering Packages Available! • Inquire now!</h1>
+            <h1>Catering Packages Available! • Inquire now!</h1>
+            <h1>Catering Packages Available! • Inquire now!</h1>
+        </div>
+
+        <p class="inquiry">
+            Indulge in a culinary adventure with our diverse catering options, offering a wide array of mouthwatering dishes.<br>From savory appetizers to decadent desserts, our catering menu promises to delight every palate.
+            <br>Complete the form below to bring the flavors of our kitchen to your next event,<br>ensuring a memorable dining experience for you and your guests.
+        </p>
+
+        <!--Catering Inquiry Form-->
+        <div class="catering">
+            <form id="survey" action="TQ.html" method="get">
+                <h1>Catering  Request</h1>
+                <div class="input-box">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required/>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="phone">Phone</label><br>
+                        <input type="tel" id="phone" name="Phone" placeholder="Phone no." required/>
+                    </div>    
+                    <div class="input-box">
+                        <label for="Email">Email</label><br>
+                        <input type="text" id="Email" name="Email" placeholder="Email address" required/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="date">Date</label><br>
+                        <input type="Date" id="Date" name="Date" required/>
+                    </div>    
+                    <div class="input-box">
+                        <label for="time">Time</label><br>
+                        <input type="time" id="Time" name="Time" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-box">
+                        <label for="package">Package</label><br>
+                        <select id="package" name="Package" required>
+                            <option value="A">Package A</option>
+                            <option value="B">Package B</option>
+                            <option value="C">Package C</option>
+                        </select>
+                        </div>    
+                    <div class="input-box">
+                        <label for="pax">Pax</label><br>
+                        <input type="number" id="pax" name="PaxNo." placeholder="No. of pax" min="5" max="150" required/>
+                    </div>
+                </div>
+
+                <div style="margin-top: 25px;">
+                    <label for="Venue">Venue (area)</label><br>
+                    <select id="Venue" name="Venue" required>
+                        <option value="ampang">Ampang</option>
+                        <option value="Bangi">Bangi</option>
+                        <option value="Cheras">Cheras</option>
+                        <option value="Cyberjaya">Cyberjaya</option>
+                        <option value="Damansara">Damansara</option>
+                        <option value="Gombak">Gombak</option>
+                        <option value="Kajang">Kajang</option>
+                        <option value="Meru">Meru</option>
+                        <option value="PJ">Petaling Jaya</option>
+                        <option value="Puchong">Puchong</option>
+                        <option value="Semenyih">Semenyih</option>
+                        <option value="Serdang">Serdang</option>
+                        <option value="Setapak">Setapak</option>
+                        <option value="SJ">Subang Jaya</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="address">Address</label><br>
+                    <input type="text" id="address" name="address" placeholder="Address" required/>
+                </div>
+                <input type="submit" class="btn" action="TQ.html" value="Submit"/>
+            </form>
+        </div>
+
+        <!----Footer (same on all pages)----------------------------------------------------->
+        <footer>
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                        <li><a href="job.html">Job Vacancy</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="https://maps.app.goo.gl/m8oHqa38EkApSeqb8">Location</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="termscondition.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="cake.html">Cake</a></li>
+                        <li><a href="drinks.html">Drink</a></li>
+                        <li><a href="pastries.html">Pastries</a></li>
+                        <li><a href="pasta.html">Pasta</a></li>
+                        <li><a href="breakfast.html">Breakfast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/energycafepk/?_rdc=1&_rdr"><img src="image/fb.png"></a>
+                        <a href="https://www.instagram.com/_energy.cafe_/"><img src="image/ig.png"></a>
+                        <a href="https://x.com/Energy_CafeEMC2?t=SzdVJ3Z79o7IQ-bonhttLg&s=09"><img src="image/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!----------------------------------------------------------------------------------->
+        <script src="shopcart.js"></script>
+        <script src="shopcart.js"></script> <!--apply to all pages (shopping cart)-->
+        <script src="general.js"></script>  <!--apply to all pages (header)-->
+    </body>
+</html>

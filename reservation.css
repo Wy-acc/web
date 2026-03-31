@@ -1,0 +1,478 @@
+body{
+    background: #e39d43;
+}
+
+/*title and intro*/
+.title {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    animation: fadeInUp 1s;
+}
+.title img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 20px 20px 10px rgba(0,0,0,0.5);
+    filter: opacity(0.8);
+}
+.title h1 {
+    position: absolute;
+    font-family: "Scripto", 'Times New Roman', Times, serif;
+    font-size: 4.5em;
+    color: #44aaac;
+    text-shadow: 4px 5px #7c3d2a;
+    padding: 70px 60px;
+    text-align: center;
+    top: 250px;
+    border: double 5px #7c3d2a;
+    background-color: rgba(244,220,171,0.8);
+    animation: fadeInUp 1s;
+}
+
+img#checker {
+    width: 100%;
+}
+
+/*Reserve a Table form*/
+.reserve{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),#7b3f2e),url(image/reserveBackground.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 200px 200px;
+}
+.reserve form{
+    width: 100%;
+}
+.reserve h1{
+    font-size: 50px;
+    font-family: "Scripto", 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px #f1d8a9;
+    padding: 70px 60px;
+}
+.reserve p{
+    font-size: 18px;
+    padding-bottom: 45px;
+}
+.reserve h1, p{
+    text-align: center;
+    color: #e39d43;
+    padding-bottom: 30px;
+}
+.reserve .input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+.reserve .input-group  input#date {
+    padding-left: 53%;
+}
+.reserve .input-group  input#time {
+    padding-left: 67%;
+}
+.reserve input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #f1d8a9;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+    border-bottom-width: 4px;
+    border-radius: 17px;
+}
+.reserve label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: 0.2s;
+}
+.reserve input:focus~label, input:valid~label,
+textarea:focus~label, textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+.reserve .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+}
+.reserve.row.input-group{
+    flex-basis: 45%;
+}
+.reserve button{
+    margin-left: 25%;
+    padding: 10px 0;
+    font-family: "Oleo Script", serif;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #f1d8a9;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 2px 2.3px 4px #f1d8a9;
+    text-decoration: none;
+}
+.reserve button:hover{
+    background-color: #f1d8a9;
+    color: #7b3f2e;
+    font-style: italic;
+    font-weight: 890;
+}
+
+/*parallax wave effect*/
+section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #398583;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(image/cateringWave.png);
+    background-size: 1000px 100px;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(var(--i)*0.25s);
+}
+.wave#wave1{
+    z-index: 50;
+    opacity: 1;
+    background-position-x: 400px;
+}
+.wave#wave2{
+    z-index: 59;
+    opacity: 0.5;
+    background-position-x: 300px;
+}
+.wave#wave3{
+    z-index: 48;
+    opacity: 0.2;
+    background-position-x: 200px;
+}
+.wave#wave4{
+    z-index: 49;
+    opacity: 0.7;
+    background-position-x: 100px;
+}
+@keyframes animate{
+    0%,100%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(10px);
+    }
+
+}
+
+/*Catering Service*/
+.sec{
+padding-left: 100px;
+padding-bottom: 15px;
+padding-top: 20px;
+position: relative;
+}
+.sec h2{
+    position: absolute;
+    top: 60px;
+    font-size: 3em;
+    color: #903536;
+    font-family: "Oleo script";
+    text-shadow: #40918e 3px 2.9px;
+}
+.sec p{
+    position: absolute;
+    top: 140px;
+    font-size: 1.4em;
+    color: #903536;
+    font-family: "Oleo script";
+}
+.sec img{
+    width: 40%;
+    border-radius: 30%;
+    box-shadow: 3px 3px 5px #333;
+    float: right;
+    margin: 5.8% 5% ;
+} 
+.desc{
+    margin: 0px 55px;
+    text-align: justify;
+    padding-top: 147px;
+    padding-right: 230px;
+    padding-left: 18px;
+    font-size: 17px;
+    font-family: Roboto slab;
+    color: #8c5610;
+}
+.desc:hover{
+    color: #903536;
+    text-shadow: 2px 2px#46aba8;
+}
+
+/*Catering Packages*/
+.container{
+    font-family: "Kaushan Script";
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e39d43;
+    padding: 4rem 0;
+}
+.img-box img{
+    display: block;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+.img-box:hover img{
+    transform: scale(1.07);
+}
+.grid .popup-image{
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.grid .popup-image span{
+    position: absolute;
+    top: 0; left: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+.grid .popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+@media(max-width:768px){
+    .grid .popup-image img{
+        width: 95%;
+    }
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    grid-gap: 2rem;
+    text-align: center;
+    width: 92%;
+    margin: auto;
+}
+.card{
+    display: block;
+    overflow: hidden;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.7);
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+}
+.card-content{
+    position: absolute;
+    background-color: rgb(0 0 0/50%);
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    height: 20%;
+    padding: 2em 0 3em;
+    overflow: hidden;
+    transition: 0.7s;
+}
+.card-content h1{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize
+}
+.card-text{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding: 1.2rem;
+}
+.card-content:hover{
+    height: 65%;
+    transition: 0.7s;
+}
+@media (max-width: 1024px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 767px){
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/*Animated Scroll Text*/
+.text{
+    display: flex;
+    justify-content: flex-start;
+    background: #b06a35;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.text h1{
+    font-family: "Messenger Texture", sans-serif;
+    font-size: 3em;
+    color: transparent;
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color: #f1d8a9;
+    white-space: nowrap;
+    padding: 0.6rem;
+    letter-spacing: 1px;
+    animation: move 6s linear infinite;
+}
+@keyframes move{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/*Catering Inquiry Form*/
+.inquiry{
+    padding-top: 50px;
+    margin: 0px 28px;
+    text-align: center;
+    font-size: 22px;
+    font-family: oleo script;
+    color: #4b4242;
+    text-shadow:2px 2px rgb(188, 188, 164);
+}
+.catering{
+    width: 80%;
+    background-color: #b8be9f;
+    background-image: url(image/cateringBg.jpg);
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 12px;
+    padding: 40px 40px;
+    margin-left: 104px;
+    margin-top: 50px;
+}
+.catering .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+}
+.catering .row .input-box{
+    flex-basis: 45%;
+}
+.catering h1{
+    font-family: "Oleo script";
+    font-size: 36px;
+    text-align: center;
+    color: #7b3f2e;
+    text-shadow: #46aba8 3px 3px;
+}
+.catering label{   /*??!!!*/
+    font-family: "Oleo script";
+    font-size: larger;
+    margin: 11px;
+    color: #7b3f2e;
+}
+.catering select{
+    width: 100%;
+    height: 130%;
+    border: 2px solid;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    color: #7b3f2e;
+    font-weight: 600;
+    padding: 13px 13px;
+}
+.catering input[type=text]{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"roboto Condensed";
+}
+.catering .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+.catering .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #903536;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+.catering .input-box input::placeholder{
+    color: #786e6e;
+}
+.catering .input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.catering .btn{
+    width: 45%;
+    height: 45px;
+    background: #fff;
+    border: 2px solid;
+    border-color: #7b3f2e;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #7b3f2e;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 30px 27% 0px;
+}
+.catering .btn:hover{
+    background-color: #7b3f2e;
+    color: #f1d8a9;
+}
+.catering div{
+    padding: 7px;
+}

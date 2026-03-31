@@ -4,10 +4,20 @@ let body = document.querySelector('body');
 let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
+let listPaymentHTML = document.querySelector('.listPayment');
+let grandTotal = document.querySelector('.grandTotal');
+let ordsumSub = document.querySelector('.ordsumSub');
+let ordsumPay = document.querySelector('.ordsumPay');
+
+const deliveryPickupopt = document.getElementById('option');
 
 let category = body.dataset.category;
 let listProducts = [];                  //array of all items in json file
-let carts = [];                         
+let carts = [];                         //array of items in shopping cart
+
+//Add to cart sound effect
+const cartSound = new Audio();
+cartSound.src = "audiovideo/pop.mp3";
 
 //Toggle open and close the cartTab
 iconCart.addEventListener('click', () => {
@@ -34,7 +44,7 @@ const addDataToHTML = () => {
                 </button>
             </div>
             <h2>${product.name}</h2>
-            <div class="price">$${product.price.toFixed(2)}</div>`;
+            <div class="price">RM ${product.price.toFixed(2)}</div>`;
             if(product.type != "all"){      //set ID for filter
                 newProduct.setAttribute('id', product.type);
             }
@@ -44,14 +54,17 @@ const addDataToHTML = () => {
     }
 }
 
+//Upon clicking "Add to Cart" button, call addToCart() function and play sound effect
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if(positionClick.classList.contains('addCart')){    //button "Add to Cart"
         let product_id = positionClick.parentElement.parentElement.dataset.id; 
         addToCart(product_id);
+        cartSound.play();
     }
 })
 
+//addToCart function that store the item selected to cart array
 const addToCart = (product_id) => {
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
     if(carts.length <= 0){
@@ -75,6 +88,7 @@ const addCartToMemory = () => {
     localStorage.setItem('cart', JSON.stringify(carts));    //storing the carts array data into the browser's local storage
 }
 
+//Load shopping cart content to HTML page
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';    
     let totalQuantity = 0;  //total quantity for number<span> beside cart icon
@@ -92,13 +106,14 @@ const addCartToHTML = () => {
                     <img src="${info.image}" alt="">
                 </div>
                 <div class="name">${info.name}</div>
-                <div class="totalPrice">$${(info.price * cart.quantity).toFixed(2)}</div>
+                <div class="totalPrice">RM ${(info.price * cart.quantity).toFixed(2)}</div>
                 <div class="quantity">
                     <span class="minus">-</span>
                     <span>${cart.quantity}</span>
                     <span class="plus">+</span>
                 </div>`;
                 listCartHTML.appendChild(newCart);
+
             } else {
                 console.error(`Product with ID ${cart.product_id} not found`);
             }
@@ -107,7 +122,53 @@ const addCartToHTML = () => {
     iconCartSpan.innerText = totalQuantity;
 }
 
-listCartHTML.addEventListener('click', (event) => {     //click the '-' / '+' button
+//Add information in shopping cart to payment.html Cart Totals table
+const addCartToPayment = () => {
+    listPaymentHTML.innerHTML = '';
+    let totalPay = 0;
+    let ordPay = 0;
+    if (carts.length > 0) {
+        carts.forEach(cart => {     //add items stored in carts array into HTML cartTab 
+            let positionProduct = listProducts.findIndex((value) => value.id == cart.product_id);
+            if (positionProduct !== -1) {
+                let info = listProducts[positionProduct];   //get product_id in carts[] and target to the corresponding id in listProducts[] to retrieve data 
+                totalPay += info.price * cart.quantity;
+                let newPayment = document.createElement('tr');
+                newPayment.classList.add('item');
+                newPayment.dataset.id = cart.product_id;
+                newPayment.innerHTML =
+                `<td><img src="${info.image}"/></td>
+                <td><span>${info.name}</span></td>
+                <td>RM ${info.price.toFixed(2)}</td>
+                <td>${cart.quantity}</td>
+                <td>RM ${(info.price * cart.quantity).toFixed(2)}</td>`;
+                listPaymentHTML.appendChild(newPayment);
+                grandTotal.innerHTML = `RM ${totalPay.toFixed(2)}`;
+                ordsumSub.innerHTML = `RM ${totalPay.toFixed(2)}`;
+            } else {
+                console.error(`Product with ID ${cart.product_id} not found`);
+            }
+        });
+        ordPay = totalPay + 6.19;
+        ordsumPay.innerHTML = `RM ${ordPay.toFixed(2)}`;
+
+        ordPay = null;
+        deliveryPickupopt.addEventListener('change', function(event) {
+            const selectedOption = document.querySelector('input[name="deliveryType"]:checked').value;
+            if (selectedOption === 'delivery') {
+                ordPay = totalPay + 6.19;
+            } else {
+                ordPay = totalPay + 1.20;
+            }
+            ordsumPay.innerHTML = `RM${ordPay.toFixed(2)}`;
+        });
+    } else {
+        grandTotal.innerHTML = `$0.00 (no item in cart)`;
+    }
+}
+
+//Upon clicking '-' / '+' button, call changeQuantity() function
+listCartHTML.addEventListener('click', (event) => {     //click the '-' / '+' button in shopping cart tab
     let positionClick = event.target;
     if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')) {
         let product_id = positionClick.parentElement.parentElement.dataset.id;
@@ -138,6 +199,7 @@ const changeQuantity = (product_id, type) => {  //increase or decrease the qty o
     };
     addCartToMemory();  //update data
     addCartToHTML();
+    addCartToPayment();
 }
 
 const initApp = () => {
@@ -150,10 +212,9 @@ const initApp = () => {
         if(localStorage.getItem('cart')) {
             carts = JSON.parse(localStorage.getItem('cart'));
             addCartToHTML();
+            addCartToPayment();
         }
     })
 }
 
 initApp();
-
-

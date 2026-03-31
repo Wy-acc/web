@@ -1,53 +1,75 @@
-// get data from shopcart
-import { cart } from './shopcart.js';
+document.querySelector("#show-payment").addEventListener("click",function(){    //on click pay now button, add .active class
+    document.querySelector(".popup").classList.add("active");
+})
 
-// Sample shopping cart data (replace this with your actual shopping cart data)
-            var cart = [];
+document.querySelector(".popup .close-btn").addEventListener("click",function(){    //on click close button, remove .active class
+    document.querySelector(".popup").classList.remove("active");
+})
 
-            // Function to display cart items in the table
-            function displayCartItems() {
-                var tableBody = document.getElementById("cart-items");
-                var totalPrice = 0;
+//Card number validation
+let cardNumInput = document.querySelector('#cardNum');
 
-                // Clear existing rows
-                tableBody.innerHTML = "";
+cardNumInput.addEventListener('keyup', () => {
+    let cNumber = cardNumInput.value;
+    cNumber = cNumber.replace(/\D/g, "");
+    
+    let formattedNumber = cNumber.match(/.{1,4}/g);
+    if (formattedNumber) {
+        formattedNumber = formattedNumber.join("-");
+    }
+    cardNumInput.value = formattedNumber || '';
+});
 
-                // Populate table rows with cart items
-                cartItems.forEach(function(item) {
-                    var row = tableBody.insertRow();
-                    var idCell = row.insertCell(0);
-                    var productCell = row.insertCell(1);
-                    var priceCell = row.insertCell(2);
-                    var quantityCell = row.insertCell(3);
-                    var totalCell = row.insertCell(4);
+//Handling Delivery or Pickup Options (changes made in billing details form)
+const pickUpTime = document.getElementById('pickupTime');
+pickUpTime.style.display = 'none';      //default no pickup time in form (delivery option form)
 
-                    idCell.textContent = item.id;
-                    productCell.textContent = item.product;
-                    priceCell.textContent = "$" + item.price.toFixed(2);
-                    quantityCell.textContent = item.quantity;
-                    var total = item.price * item.quantity;
-                    totalCell.textContent = "$" + total.toFixed(2);
+document.getElementById('option').addEventListener('change', function(event) {
+    const selectedOption = document.querySelector('input[name="deliveryType"]:checked').value;
+    const streetAddress = document.getElementById('streetadd');
+    const areaOption = document.getElementById('areaopt');
+    const pickUpTime = document.getElementById('pickupTime');
+    const packaging = document.getElementById('Packaging');
+    const delivery = document.getElementById('DeliveryFee');
 
-                    totalPrice += total;
-                });
+    if (selectedOption === 'delivery') {        //upon delivery option
+        streetAddress.style.display = 'block';
+        areaOption.style.display = 'block';
+        pickUpTime.style.display = 'none';
+        packaging.textContent = 'RM 1.20';
+        delivery.textContent = 'RM 4.99';
+    } else {                                    //upon pickup option 
+        streetAddress.style.display = 'none';   //(remove address and town/city selection)
+        areaOption.style.display = 'none';
+        pickUpTime.style.display = 'block';     //added pickup time selections
+        packaging.textContent = 'RM 1.20';
+        delivery.textContent = 'RM 0.00';        //delivery fee = 0.00
+    }
+});
 
-                // Update total price
-                document.getElementById("total-price").textContent = "$" + totalPrice.toFixed(2);
-            }
+//pay form validation before submission
+document.getElementById('payform').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-            // Call the displayCartItems function to initially populate the table
-            displayCartItems();
+    const cardName = document.getElementById('Noc').value.trim();
+    const paymentMethod = document.getElementById('method').value;
+    const cardNum = document.getElementById('cardNum').value.replace(/\s/g, "");
+    const expireMonth = document.getElementById('ExpireMon').value;
+    const expireYear = document.getElementById('ExpireYear').value;
+    const cvv = document.getElementById('CVV').value;
+    const Fname = document.getElementById('fnBox').value.trim();
+    const Lname = document.getElementById('lnBox').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const streetAddressValue = document.getElementById('address').value.trim();
+    const areaOptionValue = document.getElementById('area').value;
+    const pickUpTimeValue = document.getElementById('pickupTime').value;
 
-            let cardNumInput = 
-            document.querySelector('#cardNum') 
-        
-        cardNumInput.addEventListener('keyup', () => { 
-            let cNumber = cardNumInput.value 
-            cNumber = cNumber.replace(/\s/g, "") 
-        
-            if (Number(cNumber)) { 
-                cNumber = cNumber.match(/.{1,4}/g) 
-                cNumber = cNumber.join(" ") 
-                cardNumInput.value = cNumber 
-            } 
-        })
+    if (cardName === '' || paymentMethod === '' || cardNum === '' || expireMonth === '' ||
+        expireYear === '' || cvv === '' || Fname === '' || Lname === '' || streetAddressValue === '' ||
+        areaOptionValue === '' || email === '') {
+        alert('Please fill out all fields');
+        return;
+    }
+
+    window.location.href = 'TQ.html';
+});

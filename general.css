@@ -1,3 +1,4 @@
+/*Import fonts*/
 @font-face {
     font-family: "Fira Sans";
     src: url('font/Fira_Sans/FiraSans-Regular.ttf') format('truetype'),
@@ -42,20 +43,7 @@
     src: url('font/Scripto-2OR2v.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: "Ricks American";
-    src: url('font/RicksAmericanNF.ttf') format('truetype');
-}
-@font-face {
-    font-family: "Boggie Boys";
-    src: url('font/BoogieBoysShadow-gx6AE.otf') format('opentype'),
-    url('font/BoogieBoysRegular-L36y3.otf') format('opentype');
-}
-@font-face {
-    font-family: "Painter";
-    src: url('font/PainterPersonalUseOnly-Br0w.ttf') format('truetype');
-}
-
+/*Header shop cart icon hover animation*/
 @keyframes shake {
     from {
         transform: rotate(15deg);
@@ -66,10 +54,25 @@
     }
 }
 
+/*Intro and Title animation upon loading page*/
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+
 html{
     overflow-x: hidden;
 }
 
+/*Reset elements*/
 *,
 *:before,
 *:after{
@@ -78,12 +81,15 @@ html{
     box-sizing: border-box;
 }
 
+/*Set center and designed for 1024 x 768 px screen*/
 body{
     margin: 0 auto;
     width: 100%;
     max-width: 1020px;
 	min-width: 640px;
 }
+
+/*Header*/
 header{
     position:fixed;
     top:0;
@@ -96,13 +102,14 @@ header{
 }
 header ul{
     position: relative;
-    display:flex;
-    left:10%;
-    width:100%;
+    display: flex;
+    left: 10%;
+    width: 100%;
 }
 header ul li{
     position: relative;
     list-style:none;
+    
 }
 header ul li a{
     font-family: 'Times New Roman', Times, serif;
@@ -120,12 +127,13 @@ header.sticky{
     padding:0px 105px;
     background: #398583;
     max-width: 1020px;
+	
 }
 header.sticky ul li a{
-    color:black;
+    color: #f4dcab;
+    text-shadow: rgba(0,0,0,0.3);
 }
 .logo img{
-    /* display: inline-block; */
     position:relative;
     width: 180px;
     height: 100px;
@@ -162,7 +170,7 @@ header.sticky ul li a{
     left:80%
 }
 
-/* underline */
+/*Header underline (hover effect)*/
 header ul li a:after{
     content:"";
     position:absolute;
@@ -303,20 +311,20 @@ footer ul{
 .footer-col h4{
     position: relative;
     font-size: 18px;
-    color: #839175;
+    color: #edb368;
+    font-weight: 100;
     font-family: "Messenger Texture", sans-serif;
     text-transform: capitalize;
     margin-bottom: 30px;
-    text-shadow: 2px 3px #e39d43 ;
+    text-shadow: 3px 3px #839175 ;
 }
-.footer-col h4::before{
-    content: " ";
+.footer-col h4::after{
+    content: "";
     position:absolute;
     left: 0;
     bottom:-10px;
     background-color: #ffffff;
     height: 2px;
-    box-sizing: border-box;
     width: 50px;
 }
 .footer-col ul li:not(:last-child){

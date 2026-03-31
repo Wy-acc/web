@@ -1,19 +1,21 @@
 html {
-    background-color: #f4dcab;
+    background-color: #f4dcab; 
 }
 
+/*title and intro*/
 .title {
     margin: auto;
     justify-content: center;
     display: flex;
     overflow: hidden;
     border-radius: 0 0 20px 20px;
+    animation: fadeInUp 1s;
 }
 
 .title video {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     transform: scale(1.2);
     box-shadow: 20px 20px 10px rgba(0,0,0,0.5);
     filter: opacity(0.8);
@@ -32,9 +34,10 @@ html {
     text-shadow: 4px 5px #7c3d2a;
     padding: 70px 60px;
     text-align: center;
-    margin-top: 12%;
+    top: 200px;
     border: double 5px #7c3d2a;
     background-color: rgba(244,220,171,0.6);
+    animation: fadeInUp 1s;
 }
 
 /*parallex effect section (sorts of selections)*/
@@ -69,7 +72,20 @@ html {
     pointer-events: none;
 }
 
-/* wave divider section */
+img#arrowElmt {
+    width: 10%;
+    pointer-events: initial;
+    transform: rotate(270deg);
+    top: 250px;
+    left: 35%;
+}
+
+img#arrowElmt:hover {
+    animation: jelly 0.5s;
+    cursor: pointer;
+}
+
+/*-----------------wave divider section-----------------*/
 section#waveDivide,
 section#wave2Divide,
 section#wave3Divide,
@@ -121,14 +137,7 @@ section#wave4Divide .wave {
 section#wave5Divide .wave {
     background-image: url(image/wave5.png);
 }
-@keyframes wave {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-}
+
 .wave#wave1-1, .wave#wave2-1, .wave#wave3-1, .wave#wave4-1, .wave#wave5-1 {
     z-index: 50;
     opacity: 1;
@@ -149,6 +158,7 @@ section#wave5Divide .wave {
     opacity: 0.7;
     background-position-x: 100px;
 }
+/*-----------------------------------------------------*/
 
 /* cake category section */
 .cakeCat {
@@ -617,25 +627,86 @@ section#wave5Divide .wave {
     top: 74%;
 }
 
+/*Scroll Text*/
+.scrollText{
+    display: flex;
+    justify-content: flex-start;
+    background: #f44e21;
+    overflow: hidden;
+}
+.scrollText h1{
+    font-family: "Messenger Texture", sans-serif;
+    font-size: 3em;
+    color: #242947;
+    font-weight: 100;
+    text-shadow: 3px 3px #e5d6bd;
+    white-space: nowrap;
+    padding: 0.6rem;
+    letter-spacing: 1px;
+    animation: move 6s linear infinite;
+}
+@keyframes move{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 /* speciality and promotion */
 .promotion {
     background-color: #f4dcab;
-    padding: 150px 0px 0px;
+    padding: 100px 0px 0px;
 }
-.speciality {
-    display: flex;
-    border: 5px double #398583;
+img#arrow {
+    width: 100px;
+    position: absolute;
+    left: 27%;
+    transform: rotate(180deg);
+}
+img#curious {
+    width: 30%;
+}
+img#curious:hover {
+    animation: vibrate 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    cursor: pointer;
+}
+@keyframes vibrate {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}
+.speciality, .what {
+    float: right;
+    display: none;
+    border: 8px double #398583;
     border-radius: 10px;
-    width: 70%;
-    margin: auto;
+    width: 60%;
+    margin-right: 5%;
 }
-.speciality-content {
+.what {
+    display: flex;
+}
+.speciality-content, .what-content {
     position: relative;
-    padding: 0px 50px 50px 50px;
+    padding: 0px 40px 40px 50px;
     text-align: center;
     margin: 5px;
 }
-.speciality-content h2 {
+.speciality-content h2, .what-content h2 {
     font-family: "Scripto", serif;
     font-size: 3.4em;
     color: #44aaac;
@@ -650,7 +721,13 @@ section#wave5Divide .wave {
     color: #7c3d2a;
     text-shadow: 1px 1px rgba(0,0,0,0.2);
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: 1.2em;
+}
+.speciality-content p strong {
+    font-family: "Messenger Texture", sans-serif;
+    color: #f44e21;
+    font-size: 0.9em;
+    line-height: 3em;
 }
 
 /*Slideshow section*/
@@ -660,7 +737,7 @@ section#wave5Divide .wave {
     padding: 20px;
     font-family: "Roboto Slab", serif;
     color: #592a1c;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .slideshow h2 {
     padding: 0 10%;
@@ -699,10 +776,10 @@ section#wave5Divide .wave {
 }
 .slide-tag {
     position: absolute;
-    background-color: #7c3d2a;
+    background-color: #d3122d;
     padding: 5px;
     border-radius: 5px;
-    color: #f4dcab;
+    color: #f3c12e;
     font-family: "Messenger Texture", serif;
     right: 0%;
     top: 10px;
@@ -751,8 +828,9 @@ section#wave5Divide .wave {
 }
 .item-info h2 {
     text-transform: capitalize;
-    font-family: "Roboto Slab";
-    text-shadow: 2px 2px #7c3d2a;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 800;
+    text-shadow: 3px 2px #7c3d2a;
     font-size: 1.5em;
     padding: 0;
     margin-bottom: 20px;
@@ -792,7 +870,6 @@ section#wave5Divide .wave {
 }
 .nxt-btn {
     right: 0;
-    /* background-color: rgba(241, 216, 169, 0.5); */
 }
 .pre-btn img, .nxt-btn img {
     width: 50px;
@@ -800,4 +877,222 @@ section#wave5Divide .wave {
 }
 .pre-btn img:hover, .nxt-btn img:hover {
     opacity: 1;
+}
+
+/*Empty Plate Category*/
+.quickView {
+    position: relative;
+    height: 500px;
+    margin: 20px auto;
+}
+.quickView img{
+    width: 40%;
+    display: block;
+    position: absolute;
+    left: 30%;
+    margin: 30px auto;
+}
+
+/* Button CSS for empty plate section */
+button.plateButton {
+  touch-action: manipulation;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  touch-action: manipulation;
+    color: #242947;
+    font-family: "Kaushan Script", serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.4em 1em;
+    background: #7edadb;
+    border: 2px solid #32807d;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.plateButton::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #44aaac;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #44aaac, 0 0.625em 0 0 #7edadb;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.plateButton:hover {  /*mouse over*/
+  background: #a8eced;
+  transform: translate(0, 0.25em);
+}
+button.plateButton::before {
+  box-shadow: 0 0 0 2px #7edadb, 0 0.5em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.5em, -1em);
+}
+button.plateButton:active { /*on click*/
+  background: #7edadb;
+  transform: translate(0em, 0.75em);
+}
+button.plateButton:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
+button#plate1 {
+    left: 20%;
+    top: 100px;
+}
+button#plate2 {
+    left: 60%;
+    top: 50px;
+}
+button#plate3 {
+    left: 55%;
+    top: 200px;
+}
+button#plate4 {
+    right: 15%;
+    top: 300px;
+}
+button#plate5 {
+    left: 29%;
+    top: 350px;
+}
+
+/* Empty plate image */
+img#plateimg1, img#plateimg2, img#plateimg3, img#plateimg4 {
+    top: -4px;
+    opacity: 0;
+}
+img#plateimg5 {
+    top: -3px;
+    opacity: 0;
+}
+
+/*Menu Overview*/
+.menuPrompt {
+    display: block;
+    position: relative;
+    height: 80vh;
+}
+.menuPrompt h2 {
+    color: #44aaac;
+    text-shadow: 5px 4px #7c3d2a;
+    font-family: "Scripto", serif;
+    font-size: 3.2em;
+    text-align: center;
+    margin: 30px auto 10px;
+}
+img#target {
+    width: 45%;
+    margin: auto;
+    position: absolute;
+    left: 27%;
+}
+img#target:hover {
+    cursor: pointer;
+    transition-duration: 1s;
+    width: 50%;
+    left: 25%;
+}
+img#arrow2 {
+    width: 30%;
+    position: absolute;
+    left: 15%;
+    transform: rotate(270deg);
+    display: none;
+    cursor: pointer;
+}
+.menuPrompt:hover img#arrow2 {
+    display: block;
+}
+.menuPrompt button {
+    background-color: #44aaac;
+    height: 60px;
+    width: 160px;
+    padding: 10px;
+    box-shadow: 3px 4px #242947;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 0px;
+    left: 40%;
+}
+.menuPrompt button:hover {
+    cursor: pointer;
+    animation: jelly 0.5s;
+}
+@keyframes jelly{
+    0%,
+    100%{
+        transform:scale(1,1);
+    }
+    25% {
+        transform: scale(0.9,1.1);
+    }
+    50%{
+        transform: scale(1.1,0.9);
+    }
+    75%{
+        transform:scale(0.95,1.05);
+    }
+} 
+.menuPrompt button a {
+    text-decoration: none;
+    color: #f4dcab;
+    font-family: "Kaushan Script", serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+.menuPop {
+    position: relative;
+    width: 70%;
+    height: 70vh;
+    margin: auto;
+    z-index: 10;
+    overflow-y: scroll;
+    display: none;
+    margin-top: -70vh;
+}
+.menuPop::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+.menuPop::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+.menuPop::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+    border-radius: 5px;
+}
+.menuPop button {
+    background: transparent;
+    border: none;
+    font-family: "Messenger Texture", sans-serif;
+    font-size: 3em;
+    font-weight: 100;
+    color: red;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.menuPop button:hover {
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color: #ffb92e;
+}
+img#menu {
+    display: block;
 }

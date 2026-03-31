@@ -1,15 +1,384 @@
+body{
+    background-color: #f7e0ba;
+}
 
-        table {
-            border-collapse: collapse;
-            width: 100%; 
-        }
-        
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        
-        th {
-            background-color: #f2f2f2;
-        }
+/*title and intro*/
+.title {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    animation: fadeInUp 1s;
+}
+.title img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 20px 20px 10px rgba(0,0,0,0.5);
+    filter: opacity(0.8);
+}
+.title h1 {
+    position: absolute;
+    font-family: "Scripto", 'Times New Roman', Times, serif;
+    font-size: 5em;
+    color: #44aaac;
+    text-shadow: 4px 5px #7c3d2a;
+    padding: 70px 60px;
+    text-align: center;
+    top: 250px;
+    border: double 5px #7c3d2a;
+    background-color: rgba(244,220,171,0.8);
+    animation: fadeInUp 1s;
+}
+
+/*Pop Up Section (Pay Now Button Form)*/
+.popup{
+    position: relative;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 35em;
+    padding: 20px 30px;
+    background:#44aaac;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.popup.active{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 200ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.popup .close-btn{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    background: #ed5454;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.popup .payform h2{
+    text-align: center;
+    color:rgb(91, 55, 0);
+    font-family: "Scripto", serif;
+    text-shadow: 5px 5px #e0c55c;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+.popup .payform .form-element{
+    padding: 5px 0px;
+    margin: 15px 0px;
+}
+.popup .payform .form-element label{
+    font-size: 20px;
+    font-family: "Scripto", serif;
+    font-weight: 300;
+    color:rgb(91, 55, 0);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.popup .payform .form-element input,
+.popup .payform .form-element select{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    border: none;
+    background-color: #e7ddcb;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.popup .payform .flex { 
+    display: flex;
+    gap: 5px;
+} 
+.popup .payform .flex .form-element { 
+    flex: 1 1; 
+    margin-top: 5px;
+    width: 50%; 
+    font-family: "Scripto", serif;
+} 
+.popup .payform .form-element input[type="submit"]{
+    width:100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: red;
+    color: #f5f5f5;
+    border-radius: 10px;
+    font-family: "Scripto", serif;
+    cursor: pointer;
+}
+
+/*Cart Totals Table*/
+table#itemDetails {
+    border-collapse: separate;
+    margin: 20px auto;
+    color: #f3c12e;
+    width: 90%;
+    background-color: #017b8a;
+    overflow: hidden;
+    border-spacing: 0;
+    border-radius: 20px;
+}
+table#itemDetails caption {
+    font-family: "Messenger Texture", sans-serif;
+    font-size: 3em;
+    margin: 20px;
+    color: #D3122D;
+    text-shadow: 3px 3px #f3c12e;
+}
+table#itemDetails th,td{
+    padding: 1%;
+    text-align: center;
+    border-bottom: 4px ridge #f3c12e;
+}
+table#itemDetails th:nth-child(1) {
+    border-radius: 20px 0px 0px 0px;
+}
+table#itemDetails th:nth-last-child(1) {
+    border-radius: 0px 20px 0px 0px;
+}
+table#itemDetails thead{
+    background-color: #D3122D;
+    font-family: "Scripto", serif;
+    font-size: 2em;
+    font-weight: 100;
+    text-shadow: 3px 3px #017b8a;
+}
+table#itemDetails tbody{
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.2em;
+}
+table#itemDetails tr.item > td:first-of-type {
+    width: 10%;
+}
+table#itemDetails img {
+    display: inline-flex;
+    width: 100%;
+}
+table#itemDetails tfoot th, tfoot td {
+    border-bottom: none;
+    text-align: right;
+}
+table#itemDetails tfoot th {
+    font-family: "Scripto", serif;
+    font-size: 2em;
+    font-weight: 100;
+    color: #f3c12e;
+    text-shadow: 3px 3px #D3122D;
+    padding-right: 10%;
+}
+table#itemDetails tfoot td {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+img#checker {
+    width: 100%;
+    margin: 30px auto;
+}
+
+/*Delivery or Pickup Options*/
+#option {
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-flex; 
+}
+#option input[type="radio"] {
+    display:none;
+}
+#option label {
+    position: relative; 
+    color: #e0c55c;
+    font-family: "Messenger Texture", sans-serif;
+    font-size: 2em;
+    text-shadow: 3px 3px #D3122D;
+    border: 3px solid #7c3d2a;
+    border-radius: 0.5em;
+    padding: 1em 2em;
+    margin-top: 4em; 
+    margin-right: 2em; 
+    display: inline-flex;
+    gap: 2em;
+    cursor: pointer;
+    align-items: center;
+}
+#option label:before {
+    content: "";
+    height: 1em;
+    width: 1em;
+    border: 0.55em solid #e0c55c;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: inline-block;
+}
+#option input[type="radio"]:checked + label {
+    background-color: #e0c55c;
+    color: #D3122D;
+    text-shadow: 3px 3px #44aaac;
+}
+#option input[type="radio"]:checked + label:before {
+    border: 0.55em solid #D3122D;
+}
+
+
+h2#billform, h2#orderSummary{
+    font-family: "Messenger Texture", serif;
+    font-size: 2.6em;
+    font-weight: 100;
+    color: #D3122D;
+    text-shadow: 3px 3px #e0c55c;
+    text-align: center;
+    margin: 30px auto;
+}
+
+/*Billing Details form*/
+form#billform {
+    width: 90%;
+    margin: 10px auto;
+    background-color: #f3c12e;
+    border: 5px solid #D3122D;
+    border-radius: 10px;
+    padding: 30px 5%;
+}
+.billName {
+    display: flex;
+}
+#billform label {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #017b8a;
+    margin: 20px 0px;
+}
+#billform input {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1em;
+    margin: 15px auto;
+    margin-left: 10px;
+    padding: 2%;
+    border-radius: 10px;
+    border: none;
+    background-color: #e7ddcb;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    height: 30px;
+    color: #017b8a;
+}
+#billform select{
+    color: #017b8a;
+}
+input#fnBox, input#lnBox {
+    width: 25%;
+}
+input#fnBox {
+    margin-right: 15%;
+}
+#billform b {
+    font-family: "Oleo Script", serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: #D3122D;
+    text-shadow: 1px 1px #017b8a;
+}
+input#address {
+    width: 75%;
+}
+select#area {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 0.9em;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 2%;
+    border-radius: 10px;
+    border: none;
+    background-color: #e7ddcb;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    height: 50px;
+}
+
+/*Order Summary (Your Order Table)*/
+table#orderSummary {
+    width: 80%;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 20px auto;
+    color: #f3c12e;
+    background-color: #017b8a;
+    border-radius: 20px;
+}
+table#orderSummary th {
+    padding: 20px;
+    padding-left: 10%;
+    font-family: "Oleo Script", serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    text-shadow: 2px 2px #D3122D;
+    border-bottom: 4px ridge #f3c12e;
+}
+table#orderSummary td {
+    font: 1.2em "Roboto Slab", sans-serif;
+}
+table#orderSummary tr:last-of-type th, 
+table#orderSummary tr:last-of-type td{
+    border: none;
+}
+#show-payment{ 
+    float: right;
+    margin-right: 10px;
+    background-color: #44aaac;
+    color: #f4dcab;
+    font-family: "Kaushan Script", serif;
+    height: 60px;
+    width: 160px;
+    font-size: 25px;
+    font-weight: 600;
+    box-shadow: 3px 4px #D3122D;
+    border: 2px solid #017b8a;
+    border-radius: 12px;
+}
+#show-payment:hover {
+    cursor: pointer;
+    animation: jelly 0.5s;
+}
+@keyframes jelly{
+    0%,
+    100%{
+        transform:scale(1,1);
+    }
+    25% {
+        transform: scale(0.9,1.1);
+    }
+    50%{
+        transform: scale(1.1,0.9);
+    }
+    75%{
+        transform:scale(0.95,1.05);
+    }
+}
+
+
+.scallop-up{
+    margin-top: -350px;
+    height:100px;
+    width:100%;
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#44aaac), color-stop(0.49, #44aaac), color-stop(0.51, #f7e0ba), to(#f7e0ba));
+    background-size: 49px 100%;
+  }
+
+footer{
+    margin-top: 0px;
+}

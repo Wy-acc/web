@@ -1,21 +1,8 @@
 html {
-    /* background-color: #7c3d2a; */
     background-color: #f4dcab;
 }
 
-body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1020px;
-    min-width: 640px;
-    overflow-x: hidden;
-    /* background-image: url(image/checkerBg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
-    background-attachment: fixed;
-}
-
+/*moving picture animation*/
 @keyframes animate {
     from {
         transform: translate(100%);
@@ -32,6 +19,8 @@ body {
         transform: translate(-200%);
     }
 }
+
+/*Moving picture Title and Intro*/
 .moving-picture {
     margin-top: 0px;
     overflow: hidden;
@@ -42,10 +31,11 @@ body {
     font-size: 5em;
     z-index: 10;
     top: 40%;
-    left: 38%;
+    left: 35vw;
     font-family: "Scripto", serif;
     color: #9c1f25;
     text-shadow: 3px 3px #44aaac;
+    animation: fadeInUp 1s;
 }
 .moving-picture-container {
     filter: opacity(0.8);
@@ -75,7 +65,6 @@ body {
 .moving-picture-container span {
     margin-left: 30px;
 }
-
 .moving-picture-container img {
     max-width: 200px;
     max-height: 250px;
@@ -93,33 +82,27 @@ body {
     display: flex;
 }
 
+/*Category and Filter By aside*/
 aside {
     width: fit-content;
     padding: 2%;
 }
-
 aside h2 {
     font-family: "Scripto", serif;
     font-size: 2.2em;
-    /* color: #f1d8a9; */
     color: #7c3d2a;
-    /* text-shadow: 3px 3px #0009; */
     text-shadow: 3px 3px #44aaac;
     margin: 0;
 }
-
 .category {
     margin-bottom: 80px;
 }
-
 aside ul {
     list-style-type: none;
     padding-left: 0;
     margin: 10px 6%;
 }
-
 aside a {
-    /* color: #f1d8a9; */
     color: #7c3d2a;
     text-decoration: none;
     font-family: "Fira Sans", serif;
@@ -128,7 +111,6 @@ aside a {
     letter-spacing: 1px;
     position: relative;
 }
-
 aside a:after {
     content: "";
     position: absolute;
@@ -146,24 +128,23 @@ aside a:hover:after {
     width: 100%;
 }
 
+/*List of food items*/
 .listProduct {
     border: none;
     margin: 10px auto;
+    margin-right: 25px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     text-align: center;
     row-gap: 30px;
 }
-
 .listProduct .item {
     border-radius: 20px;
     height: 360px;
 }
-
 .item-image {
     position: relative;
-    /* background-color: rgba(233, 217, 186, 0.164); */
     background-image: url(image/lastoBackground.jpg);
     background-size: cover;
     padding: 20px;
@@ -172,7 +153,6 @@ aside a:hover:after {
     width: 95%;
     overflow: hidden;
 }
-
 .item-image button {
     position: absolute;
     bottom: 10px;
@@ -196,7 +176,6 @@ aside a:hover:after {
     opacity: 0;
     overflow: hidden;
 }
-
 .item-image:hover button {
     opacity: 1;
     margin-bottom: 30px;
@@ -213,44 +192,36 @@ aside a:hover:after {
     z-index: -1;
     transition: 0.8s;
 }
-
 .item-image button:hover {
     box-shadow: none;
     bottom: 0px;
     color: #f4dcab;
     border: 2px solid #f4dcab;
 }
-
 .item-image button:hover::before {
     height: 180%;
     top: 0;
 }
-
 .listProduct .item img {
     overflow: hidden;
     width: 100%;
     height: 200px;
     filter: drop-shadow(0 10px 20px #0009);
 }
-
 .item-image:hover img {
     transform: scale(1.2);
     transition-duration: 1s;
 }
-
 .listProduct .item h2{
     font-family: "Ricks American", serif;
     font-size: 1.5em;
-    /* color: #f4dcab; */
     color: #6c3322;
     text-transform: capitalize;
     letter-spacing: 2px;
     line-height: 40px;
 }
-
 .listProduct .item .price {
     font-family: "Lora", serif;
-    /* color: #f4dcab; */
     color: #6c3322;
     font-weight: 600;
     letter-spacing: 7px;
